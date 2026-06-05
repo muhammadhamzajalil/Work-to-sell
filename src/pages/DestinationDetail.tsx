@@ -71,7 +71,7 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
             {/* Back action */}
             <button 
               onClick={() => onNavigate('home')}
-              className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-500 hover:text-[#1F4096] mb-6 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-500 hover:text-[#3157E6] mb-6 transition-colors cursor-pointer"
               id="dest-detail-back-to-home"
             >
               <ArrowLeft className="w-4 h-4" /> Back to Destinations Dashboard
@@ -81,7 +81,7 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <span className="text-5xl select-none">{destination.flag}</span>
-                  <span className="text-[10px] uppercase bg-blue-50 text-[#1F4096] px-2.5 py-1 rounded-full font-bold border border-blue-150 shadow-sm animate-pulse-slow">
+                  <span className="text-[10px] uppercase bg-blue-50 text-[#3157E6] px-2.5 py-1 rounded-full font-bold border border-blue-150 shadow-sm animate-pulse-slow">
                     Visa Route Processing Active
                   </span>
                 </div>
@@ -97,7 +97,7 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
               <div className="bg-white/95 backdrop-blur-md border border-slate-200 p-4 rounded-2xl md:self-end flex gap-8 shadow-sm">
                 <div>
                   <span className="block text-[10px] text-slate-400 uppercase font-black">Fee Threshold</span>
-                  <span className="text-sm font-extrabold text-[#1F4096]">{destination.tuitionRange.split(' / ')[0]}</span>
+                  <span className="text-sm font-extrabold text-[#3157E6]">{destination.tuitionRange.split(' / ')[0]}</span>
                 </div>
                 <div className="w-px bg-slate-200" />
                 <div>
@@ -120,7 +120,7 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
             
             {/* 1. Country overview block */}
             <div className="space-y-4">
-              <h3 className="text-xl md:text-2xl font-black text-slate-900 border-l-4 border-[#1F4096] pl-4 leading-tight">
+              <h3 className="text-xl md:text-2xl font-black text-slate-900 border-l-4 border-[#3157E6] pl-4 leading-tight">
                 Country Overview & Career Horizon
               </h3>
               <p className="text-sm text-slate-500 font-medium leading-relaxed">
@@ -130,13 +130,13 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
 
             {/* 2. Key advantages matrix */}
             <div className="space-y-4 pt-4">
-              <h3 className="text-lg font-bold text-slate-900 uppercase tracking-wider text-xs bg-slate-50 border border-slate-200 py-2.5 px-4 rounded-xl inline-block font-extrabold text-[#1F4096]">
+              <h3 className="text-lg font-bold text-slate-900 uppercase tracking-wider text-xs bg-slate-50 border border-slate-200 py-2.5 px-4 rounded-xl inline-block font-extrabold text-[#3157E6]">
                 Core Benefits of Study Pathways
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {destination.coreAdvantages.map((adv, idx) => (
                   <div key={idx} className="bg-slate-50 border border-slate-200 p-4 rounded-xl flex gap-3 shadow-inner">
-                    <div className="w-6 h-6 rounded-lg bg-blue-50 text-[#1F4096] border border-blue-150 flex items-center justify-center shrink-0">
+                    <div className="w-6 h-6 rounded-lg bg-blue-50 text-[#3157E6] border border-blue-150 flex items-center justify-center shrink-0">
                       <ChevronRight className="w-4 h-4" />
                     </div>
                     <p className="text-xs text-slate-500 font-semibold leading-relaxed">
@@ -168,7 +168,7 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
                     {destination.averageTuitionTable.map((row, idx) => (
                       <tr key={idx} className="hover:bg-slate-50 transition-colors">
                         <td className="py-3 pr-4 font-bold text-slate-800">{row.program}</td>
-                        <td className="py-3 pl-4 text-right font-mono font-extrabold text-[#1F4096]">{row.cost}</td>
+                        <td className="py-3 pl-4 text-right font-mono font-extrabold text-[#3157E6]">{row.cost}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -198,7 +198,7 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
             {/* 5. Post study work visa pathways */}
             <div className="space-y-4 p-6 rounded-2xl bg-blue-50/40 border border-blue-150">
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-[#1F4096]" />
+                <Clock className="w-5 h-5 text-[#3157E6]" />
                 <h3 className="text-base font-black text-slate-900 uppercase tracking-wider">
                   Post-Study Work Visa (PSW) Limits
                 </h3>
@@ -247,7 +247,7 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
                     >
                       <span>{faq.question}</span>
                       {activeFaq === idx ? (
-                        <Minus className="w-4 h-4 text-[#1F4096] shrink-0" />
+                        <Minus className="w-4 h-4 text-[#3157E6] shrink-0" />
                       ) : (
                         <Plus className="w-4 h-4 text-slate-450 shrink-0" />
                       )}
@@ -276,7 +276,7 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
 
               {/* Informational credit check */}
               <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-xs text-slate-500 space-y-4 font-semibold">
-                <h4 className="text-[#1F4096] font-black uppercase text-[10px] tracking-wider">
+                <h4 className="text-[#3157E6] font-black uppercase text-[10px] tracking-wider">
                   Assurance Frameworks
                 </h4>
                 

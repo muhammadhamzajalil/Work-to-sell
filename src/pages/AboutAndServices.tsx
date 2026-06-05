@@ -19,10 +19,10 @@ export default function AboutAndServices() {
       
       {/* Editorial Branding banner */}
       <section className="relative py-12 md:py-16 overflow-hidden border-b border-slate-150">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#1F4096]/3 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#3157E6]/3 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 z-10 relative text-center space-y-4">
-          <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/20">
+          <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/20">
             About Rahbar Consultants
           </span>
           <h1 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 animate-pulse-slow">
@@ -54,7 +54,7 @@ export default function AboutAndServices() {
           {/* Strategic value bullet metrics */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs pt-4">
             <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2 shadow-sm font-medium">
-              <span className="text-[#1F4096] font-black text-base flex items-center gap-1">✓ 100% Transparency</span>
+              <span className="text-[#3157E6] font-black text-base flex items-center gap-1">✓ 100% Transparency</span>
               <p className="text-slate-450 text-slate-500">Zero hidden fees or forced admissions to low-grade universities.</p>
             </div>
 
@@ -67,7 +67,7 @@ export default function AboutAndServices() {
 
         {/* Visual asset frame */}
         <div className="lg:col-span-5 relative">
-          <div className="absolute inset-0 bg-[#1F4096]/5 rounded-full blur-[80px]" />
+          <div className="absolute inset-0 bg-[#3157E6]/5 rounded-full blur-[80px]" />
           
           <div className="relative rounded-[30px] border border-slate-200 overflow-hidden shadow-xl bg-slate-100 aspect-video lg:aspect-square">
             <img 
@@ -85,7 +85,7 @@ export default function AboutAndServices() {
       <section className="max-w-7xl mx-auto px-4 mt-24">
         
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1 px-3 rounded-full border border-[#1F4096]/20">
+          <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1 px-3 rounded-full border border-[#3157E6]/20">
             Counseling Features
           </span>
           <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">
@@ -105,7 +105,7 @@ export default function AboutAndServices() {
               id={`about-service-detail-${srv.id}`}
             >
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#1F4096] border border-blue-100 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#3157E6] border border-blue-100 flex items-center justify-center shrink-0">
                   <Award className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-black text-slate-900">{srv.title}</h3>

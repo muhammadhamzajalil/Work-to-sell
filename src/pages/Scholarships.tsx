@@ -110,7 +110,7 @@ export default function Scholarships() {
       
       {/* Upper Brand Intro fold */}
       <section className="relative py-12 md:py-16 overflow-hidden border-b border-slate-150">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#1F4096]/3 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#3157E6]/3 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center space-y-4">
           <span className="bg-amber-50 text-amber-700 text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-amber-205">
@@ -134,7 +134,7 @@ export default function Scholarships() {
           {/* Filters shelf */}
           <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm animate-pulse-slow">
             <div className="flex items-center gap-2">
-              <Filter className="w-4 h-4 text-[#1F4096]" />
+              <Filter className="w-4 h-4 text-[#3157E6]" />
               <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Quick Filters:</span>
             </div>
             
@@ -145,7 +145,7 @@ export default function Scholarships() {
                   onClick={() => setFilterCountry(country)}
                   className={`text-xs font-bold px-3 py-1.5 rounded-lg border transition-all duration-200 cursor-pointer ${
                     filterCountry === country 
-                      ? 'bg-[#1F4096] text-white border-[#1F4096]' 
+                      ? 'bg-[#3157E6] text-white border-[#3157E6]' 
                       : 'bg-white text-slate-650 border-slate-200 hover:text-slate-900 hover:bg-slate-50'
                   }`}
                 >
@@ -206,7 +206,7 @@ export default function Scholarships() {
                       e.preventDefault();
                       document.getElementById('consultation-form-wrapper')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="mt-4 md:mt-0 text-[10px] font-black uppercase bg-[#1F4096] text-white py-2.5 px-3 rounded-lg text-center hover:opacity-90 block hover:shadow-md transition-shadow active:scale-95"
+                    className="mt-4 md:mt-0 text-[10px] font-black uppercase bg-[#3157E6] text-white py-2.5 px-3 rounded-lg text-center hover:opacity-90 block hover:shadow-md transition-shadow active:scale-95"
                     id={`scholarship-apply-btn-${sch.id}`}
                   >
                     Assess Eligibility
@@ -229,10 +229,10 @@ export default function Scholarships() {
           
           <div className="bg-white border border-slate-200 shadow-lg rounded-2xl p-6 relative overflow-hidden" id="scholarship-eligibility-calculator">
             {/* Glowing orb */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#1F4096]/3 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#3157E6]/3 rounded-full blur-2xl pointer-events-none" />
             
             <div className="flex items-center gap-2 mb-3">
-              <Calculator className="w-5 h-5 text-[#1F4096]" />
+              <Calculator className="w-5 h-5 text-[#3157E6]" />
               <h3 className="text-base font-extrabold text-slate-900">
                 Live Eligibility Calculator
               </h3>
@@ -260,7 +260,7 @@ export default function Scholarships() {
                   max="100"
                   value={grades}
                   onChange={(e) => setGrades(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-[#1F4096] focus:bg-white focus:ring-2 focus:ring-[#1F4096]/10 transition-all font-semibold"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-[#3157E6] focus:bg-white focus:ring-2 focus:ring-[#3157E6]/10 transition-all font-semibold"
                 />
               </div>
 
@@ -276,7 +276,7 @@ export default function Scholarships() {
                   max="9"
                   value={ielts}
                   onChange={(e) => setIelts(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-[#1F4096] focus:bg-white focus:ring-2 focus:ring-[#1F4096]/10 transition-all font-semibold"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:outline-none focus:border-[#3157E6] focus:bg-white focus:ring-2 focus:ring-[#3157E6]/10 transition-all font-semibold"
                 />
               </div>
 
@@ -287,7 +287,7 @@ export default function Scholarships() {
                 <select
                   value={targetCountry}
                   onChange={(e) => setTargetCountry(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-850 focus:outline-none focus:border-[#1F4096] focus:bg-white focus:ring-2 focus:ring-[#1F4096]/10 transition-all font-semibold appearance-none cursor-pointer"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-850 focus:outline-none focus:border-[#3157E6] focus:bg-white focus:ring-2 focus:ring-[#3157E6]/10 transition-all font-semibold appearance-none cursor-pointer"
                 >
                   <option value="" className="text-slate-400">Choose country...</option>
                   {DESTINATIONS.map((dest) => (
@@ -298,7 +298,7 @@ export default function Scholarships() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-[#1F4096] to-[#3B62D1] text-white text-xs font-black tracking-widest uppercase py-3 rounded-xl hover:shadow-[0_4px_12px_rgba(31,64,150,0.3)] hover:-translate-y-0.5 transition-all cursor-pointer"
+                className="w-full bg-gradient-to-r from-[#3157E6] to-[#4E72FA] text-white text-xs font-black tracking-widest uppercase py-3 rounded-xl hover:shadow-[0_4px_12px_rgba(49,87,230,0.3)] hover:-translate-y-0.5 transition-all cursor-pointer"
                 id="analyse-eligibility-submit-btn"
               >
                 Analyze Eligibility Tier
@@ -309,7 +309,7 @@ export default function Scholarships() {
             {evaluationResult && (
               <div className="mt-6 pt-6 border-t border-slate-200 space-y-4 animate-fade-in text-xs text-left">
                 <div className="bg-slate-50 border border-slate-150 rounded-xl p-4 space-y-2 font-medium">
-                  <span className="text-[9px] font-black uppercase text-[#1F4096] block tracking-widest">
+                  <span className="text-[9px] font-black uppercase text-[#3157E6] block tracking-widest">
                     Evaluation Result Portfolio
                   </span>
                   <div className="flex justify-between items-center bg-white px-2.5 py-1.5 rounded border border-slate-150">
@@ -332,7 +332,7 @@ export default function Scholarships() {
                 </div>
 
                 {evaluationResult.matchingNatives.length > 0 && (
-                  <div className="bg-blue-50 border border-blue-150 p-3 rounded-xl text-[11px] text-[#1F4096] font-bold space-y-1">
+                  <div className="bg-blue-50 border border-blue-150 p-3 rounded-xl text-[11px] text-[#3157E6] font-bold space-y-1">
                     <span className="font-extrabold block">Direct Match:</span>
                     <span>Found {evaluationResult.matchingNatives.length} specific native programs in {evaluationResult.targetCountry}.</span>
                   </div>

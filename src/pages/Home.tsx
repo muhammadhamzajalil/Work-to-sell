@@ -473,8 +473,8 @@ export default function Home({ onNavigate }: HomeProps) {
       {/* SECTION A: PREMIUM HERO FOLD */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         {/* Soft Ambient Guideline Halos */}
-        <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-[#1F4096]/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/3 -right-32 w-[400px] h-[400px] bg-[#3B62D1]/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-[#3157E6]/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/3 -right-32 w-[400px] h-[400px] bg-[#4E72FA]/5 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -483,7 +483,7 @@ export default function Home({ onNavigate }: HomeProps) {
             
             {/* Micro-label pill */}
             <div className="inline-flex self-start items-center gap-2 bg-slate-50 border border-slate-200 rounded-full py-1.5 px-4 shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-[#1F4096]" />
+              <Sparkles className="w-3.5 h-3.5 text-[#3157E6]" />
               <span className="text-[10px] md:text-xs font-bold tracking-widest text-slate-600 uppercase">
                 International Education Consultants
               </span>
@@ -493,10 +493,10 @@ export default function Home({ onNavigate }: HomeProps) {
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-black tracking-tight leading-tight md:leading-none text-slate-900">
               Your Gateway To <br />
               <span className="relative inline-block mt-1.5 pb-1">
-                <span className="relative z-10 bg-gradient-to-r from-[#1F4096] via-[#3B62D1] to-[#2563EB] bg-clip-text text-transparent">
+                <span className="relative z-10 bg-gradient-to-r from-[#3157E6] via-[#4E72FA] to-[#3157E6] bg-clip-text text-transparent">
                   [Global Education Success]
                 </span>
-                <span className="absolute bottom-1 left-0 w-full h-2.5 bg-[#1F4096]/10 rounded pointer-events-none" />
+                <span className="absolute bottom-1 left-0 w-full h-2.5 bg-[#3157E6]/10 rounded pointer-events-none" />
               </span>
             </h1>
 
@@ -513,7 +513,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   e.preventDefault();
                   document.getElementById('consultation-form-wrapper')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="w-full sm:w-auto text-center min-h-[48px] bg-gradient-to-r from-[#1F4096] to-[#3B62D1] text-white text-xs font-black tracking-widest uppercase px-8 py-4 rounded-xl hover:shadow-[0_4px_15px_rgba(31,64,150,0.3)] hover:-translate-y-0.5 transition-all outline-none"
+                className="w-full sm:w-auto text-center min-h-[48px] bg-gradient-to-r from-[#3157E6] to-[#4E72FA] text-white text-xs font-black tracking-widest uppercase px-8 py-4 rounded-xl hover:shadow-[0_4px_15px_rgba(49,87,230,0.3)] hover:-translate-y-0.5 transition-all outline-none"
                 id="hero-primary-cta"
               >
                 Get Free Assessment
@@ -534,7 +534,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <span className="text-[10px] text-slate-400 uppercase font-black tracking-widest mt-1 block">Students Guided</span>
               </div>
               <div className="border-r border-slate-100 last:border-0 pr-2">
-                <span className="block text-2xl lg:text-3xl font-black text-[#1F4096]">98%</span>
+                <span className="block text-2xl lg:text-3xl font-black text-[#3157E6]">98%</span>
                 <span className="text-[10px] text-slate-400 uppercase font-black tracking-widest mt-1 block">Visa Success</span>
               </div>
               <div className="border-r border-slate-100 last:border-0 pr-2">
@@ -552,7 +552,7 @@ export default function Home({ onNavigate }: HomeProps) {
           {/* Right Column Aesthetic Focus (55%) */}
           <div className="lg:col-span-6 flex justify-center items-center relative lg:h-[600px] mt-8 lg:mt-0">
             {/* Soft backdrop radial pulse glow */}
-            <div className="absolute inset-0 bg-[#1F4096]/5 rounded-full blur-[100px] animate-pulse" />
+            <div className="absolute inset-0 bg-[#3157E6]/5 rounded-full blur-[100px] animate-pulse" />
             
             {/* Primary Portrait Shape with curves */}
             <div className="relative w-full max-w-[480px] h-[400px] md:h-[480px] rounded-[40px] border border-slate-200 overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.08)] z-10 bg-slate-100">
@@ -601,7 +601,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <span className="text-2xl">🇬🇧</span>
               <div className="text-left">
                 <span className="block text-xs font-black text-slate-800">Study in UK</span>
-                <span className="block text-[10px] text-[#1F4096] font-bold">1-Year Masters</span>
+                <span className="block text-[10px] text-[#3157E6] font-bold">1-Year Masters</span>
               </div>
             </div>
 
@@ -613,7 +613,7 @@ export default function Home({ onNavigate }: HomeProps) {
       {/* SECTION B: IMMEDIATE TRUST BANNER */}
       <section className="py-10 bg-slate-50 border-y border-slate-150 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#1F4096] mb-6 px-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#3157E6] mb-6 px-4">
             Connecting Pakistani Students with Elite Global Institutions
           </p>
           
@@ -627,7 +627,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/20">
+            <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/20">
               Explore Destinations
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
@@ -646,7 +646,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 onMouseEnter={() => setActiveDestinationHover(dest.id)}
                 onMouseLeave={() => setActiveDestinationHover(null)}
                 onClick={() => onNavigate(`destination_${dest.slug}`)}
-                className="group relative bg-[#FFFFFF] border border-slate-200 rounded-3xl p-6 shadow-md hover:border-slate-350 hover:shadow-[0_12px_40px_rgba(31,64,150,0.06)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between min-h-[360px]"
+                className="group relative bg-[#FFFFFF] border border-slate-200 rounded-3xl p-6 shadow-md hover:border-slate-350 hover:shadow-[0_12px_40px_rgba(49,87,230,0.06)] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between min-h-[360px]"
                 id={`dest-card-home-${dest.id}`}
               >
                 {/* Micro background illustration theme */}
@@ -659,14 +659,14 @@ export default function Home({ onNavigate }: HomeProps) {
                   {/* Flag and meta attributes header */}
                   <div className="flex justify-between items-center mb-6 relative z-10">
                     <span className="text-4xl p-2 bg-slate-50 rounded-2xl border border-slate-100 select-none">{dest.flag}</span>
-                    <span className="text-[10px] bg-blue-50 text-[#1F4096] border border-blue-100 font-bold tracking-widest uppercase py-1 px-2.5 rounded-full">
+                    <span className="text-[10px] bg-blue-50 text-[#3157E6] border border-blue-100 font-bold tracking-widest uppercase py-1 px-2.5 rounded-full">
                       Entry Active
                     </span>
                   </div>
 
                   {/* Body textuals */}
                   <div className="space-y-3 relative z-10">
-                    <h3 className="text-xl font-bold group-hover:text-[#1F4096] transition-colors flex items-center gap-1.5 text-slate-900">
+                    <h3 className="text-xl font-bold group-hover:text-[#3157E6] transition-colors flex items-center gap-1.5 text-slate-900">
                       {dest.name}
                       <ArrowUpRight className="w-4 h-4 text-slate-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                     </h3>
@@ -688,12 +688,12 @@ export default function Home({ onNavigate }: HomeProps) {
                   </div>
                   <div className="flex justify-between items-center text-[10px] bg-slate-50 border border-slate-150 py-1.5 px-2.5 rounded-lg mt-2 text-slate-650 font-bold">
                     <span>PSW rights:</span>
-                    <span className="font-black text-[#1F4096]">{dest.workStudyTerms.split(' + ')[1] || 'Granted'}</span>
+                    <span className="font-black text-[#3157E6]">{dest.workStudyTerms.split(' + ')[1] || 'Granted'}</span>
                   </div>
                 </div>
 
                 {/* 3D border-glow stroke animation highlight on hover */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#1F4096] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#3157E6] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
               </div>
             ))}
           </div>
@@ -703,7 +703,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* NEW SECTION 1: WHY CHOOSE RAHBAR CONSULTANTS */}
       <section className="py-24 bg-white relative overflow-hidden border-t border-slate-100" id="why-choose-rahbar-consultants">
-        <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-[#1F4096]/3 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-[#3157E6]/3 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -724,7 +724,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 className="absolute -bottom-6 -right-2 md:right-8 z-20 bg-white/95 border border-slate-200 p-5 rounded-3xl shadow-[0_15px_35px_rgba(0,0,0,0.08)] hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center text-center select-none w-44"
                 id="stat-overlay-premium"
               >
-                <span className="block text-4xl font-extrabold text-[#1F4096] tracking-tight">98%</span>
+                <span className="block text-4xl font-extrabold text-[#3157E6] tracking-tight">98%</span>
                 <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest mt-1 block leading-tight">Approved Student Visas</span>
               </div>
             </div>
@@ -732,7 +732,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Right Column: Narrative content */}
             <div className="lg:col-span-6 space-y-8">
               <div className="space-y-4">
-                <span className="inline-flex items-center gap-2 bg-[#1F4096]/8 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/15 shadow-sm">
+                <span className="inline-flex items-center gap-2 bg-[#3157E6]/8 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/15 shadow-sm">
                   <Sparkles className="w-3.5 h-3.5" />
                   The Rahbar Pillar
                 </span>
@@ -746,9 +746,9 @@ export default function Home({ onNavigate }: HomeProps) {
 
               {/* Three detailed bullet points */}
               <div className="space-y-4">
-                <div className="flex gap-4 p-4 rounded-2xl bg-[#1F4096]/3 border border-[#1F4096]/8 shadow-sm hover:border-[#1F4096]/20 transition-all duration-300">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#1F4096] flex items-center justify-center shrink-0 border border-blue-100">
-                    <Award className="w-5 h-5 text-[#1F4096]" />
+                <div className="flex gap-4 p-4 rounded-2xl bg-[#3157E6]/3 border border-[#3157E6]/8 shadow-sm hover:border-[#3157E6]/20 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#3157E6] flex items-center justify-center shrink-0 border border-blue-100">
+                    <Award className="w-5 h-5 text-[#3157E6]" />
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-slate-900 mb-1">PIER Certified Registrars</h4>
@@ -791,11 +791,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* NEW SECTION 2: WORLD-CLASS CAMPUSES AT YOUR REACH */}
       <section className="py-24 bg-slate-50 border-y border-slate-150 relative" id="featured-campuses">
-        <div className="absolute top-1/2 -right-32 w-80 h-80 bg-[#1F4096]/3 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/2 -right-32 w-80 h-80 bg-[#3157E6]/3 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/20">
+            <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/20">
               Elite Academic Catalog
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
@@ -818,7 +818,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   placeholder="Query university name, course, or city..."
                   value={univSearch}
                   onChange={(e) => setUnivSearch(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-11 pr-4 py-3.5 text-xs font-medium text-slate-805 focus:outline-none focus:border-[#1F4096] focus:bg-white transition-all placeholder:text-slate-400"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-11 pr-4 py-3.5 text-xs font-medium text-slate-805 focus:outline-none focus:border-[#3157E6] focus:bg-white transition-all placeholder:text-slate-400"
                 />
               </div>
 
@@ -830,7 +830,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     onClick={() => setSelectedCountry(country)}
                     className={`px-4 py-2 rounded-xl text-[10px] md:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer border ${
                       (selectedCountry === country)
-                        ? 'bg-[#1F4096] text-white border-[#1F4096] shadow-sm'
+                        ? 'bg-[#3157E6] text-white border-[#3157E6] shadow-sm'
                         : 'bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-200/80 hover:border-slate-350'
                     }`}
                   >
@@ -856,7 +856,7 @@ export default function Home({ onNavigate }: HomeProps) {
             }).map((univ, idx) => (
               <div 
                 key={idx}
-                className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-[0_12px_35px_rgba(31,64,150,0.06)] hover:border-slate-350 -translate-y-0 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between min-h-[300px]"
+                className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-[0_12px_35px_rgba(49,87,230,0.06)] hover:border-slate-350 -translate-y-0 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between min-h-[300px]"
               >
                 <div>
                   {/* Top Line Meta features */}
@@ -874,7 +874,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   </div>
 
                   {/* University Name */}
-                  <h3 className="text-lg font-black text-slate-900 leading-snug tracking-tight mb-2 hover:text-[#1F4096] transition-colors">
+                  <h3 className="text-lg font-black text-slate-900 leading-snug tracking-tight mb-2 hover:text-[#3157E6] transition-colors">
                     {univ.name}
                   </h3>
 
@@ -886,7 +886,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
                   {/* Recommended Programs matrix */}
                   <div className="space-y-2 mb-6">
-                    <span className="block text-[10px] uppercase font-black tracking-widest text-[#1F4096]">Recommended Programs:</span>
+                    <span className="block text-[10px] uppercase font-black tracking-widest text-[#3157E6]">Recommended Programs:</span>
                     <div className="flex flex-wrap gap-1.5">
                       {univ.programs.map((prog, pidx) => (
                         <span key={pidx} className="bg-slate-50 border border-slate-150 text-[10px] text-slate-600 px-2.5 py-1 rounded-lg font-medium">
@@ -900,7 +900,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 {/* Main quick Action to Prefill values */}
                 <button
                   onClick={() => handleInquireUniversity(univ.country, `Admissions support at ${univ.name}`)}
-                  className="w-full text-center py-3 bg-slate-50 border border-slate-200/80 hover:bg-[#1F4096] hover:text-white hover:border-[#1F4096] text-slate-700 text-[11px] font-black tracking-widest uppercase rounded-xl transition-all cursor-pointer"
+                  className="w-full text-center py-3 bg-slate-50 border border-slate-200/80 hover:bg-[#3157E6] hover:text-white hover:border-[#3157E6] text-slate-700 text-[11px] font-black tracking-widest uppercase rounded-xl transition-all cursor-pointer"
                 >
                   Inquire About Admission
                 </button>
@@ -929,13 +929,13 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* NEW SECTION 3: SCHOLARSHIP ELIGIBILITY SECTION & EVALUATOR TOOL */}
       <section className="py-24 bg-white relative overflow-hidden" id="scholarships-evaluator">
-        <div className="absolute top-1/3 -left-32 w-96 h-96 bg-[#1F4096]/4 rounded-full blur-[110px] pointer-events-none" />
+        <div className="absolute top-1/3 -left-32 w-96 h-96 bg-[#3157E6]/4 rounded-full blur-[110px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 z-10 relative animate-fade-in">
           
           {/* Header Layout identical to Screenshot structure */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
             <div className="lg:col-span-8 space-y-4 text-left">
-              <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/20 inline-block">
+              <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/20 inline-block">
                 Fund Your Dream
               </span>
               <h2 className="text-3xl md:text-4xl font-black tracking-tight text-slate-900 uppercase">
@@ -952,7 +952,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   e.preventDefault();
                   document.getElementById('evaluation-form-card')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-gradient-to-r from-[#1F4096] to-[#3B62D1] text-white text-xs font-black tracking-widest uppercase px-8 py-4 rounded-xl hover:shadow-[0_4px_15px_rgba(31,64,150,0.3)] hover:-translate-y-0.5 transition-all block text-center w-full lg:w-auto"
+                className="bg-gradient-to-r from-[#3157E6] to-[#4E72FA] text-white text-xs font-black tracking-widest uppercase px-8 py-4 rounded-xl hover:shadow-[0_4px_15px_rgba(49,87,230,0.3)] hover:-translate-y-0.5 transition-all block text-center w-full lg:w-auto"
                 id="check-scholarship-btn-anchor"
               >
                 CHECK SCHOLARSHIP ELIGIBILITY
@@ -969,7 +969,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Left Column: Form Controls */}
             <div className="lg:col-span-5 bg-white border border-slate-200/80 p-6 rounded-3xl space-y-5 shadow-sm">
               <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-                <Calculator className="w-5 h-5 text-[#1F4096]" />
+                <Calculator className="w-5 h-5 text-[#3157E6]" />
                 <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider">Parameters Audit</h3>
               </div>
 
@@ -979,7 +979,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <select
                   value={evalCountry}
                   onChange={(e) => setEvalCountry(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-bold text-slate-800 focus:outline-none focus:border-[#1F4096] cursor-pointer"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-bold text-slate-800 focus:outline-none focus:border-[#3157E6] cursor-pointer"
                 >
                   <option value="United Kingdom">🇬🇧 United Kingdom (UK)</option>
                   <option value="Australia">🇦🇺 Australia</option>
@@ -1001,14 +1001,14 @@ export default function Home({ onNavigate }: HomeProps) {
                     <button
                       type="button"
                       onClick={() => { setEvalScoreType('cgpa'); setEvalScoreVal('3.7'); }}
-                      className={`px-2 py-1 text-[9px] font-black rounded ${evalScoreType === 'cgpa' ? 'bg-white text-[#1F4096] shadow-sm' : 'text-slate-500'}`}
+                      className={`px-2 py-1 text-[9px] font-black rounded ${evalScoreType === 'cgpa' ? 'bg-white text-[#3157E6] shadow-sm' : 'text-slate-500'}`}
                     >
                       CGPA
                     </button>
                     <button
                       type="button"
                       onClick={() => { setEvalScoreType('percentage'); setEvalScoreVal('85'); }}
-                      className={`px-2 py-1 text-[9px] font-black rounded ${evalScoreType === 'percentage' ? 'bg-white text-[#1F4096] shadow-sm' : 'text-slate-500'}`}
+                      className={`px-2 py-1 text-[9px] font-black rounded ${evalScoreType === 'percentage' ? 'bg-white text-[#3157E6] shadow-sm' : 'text-slate-500'}`}
                     >
                       Marks %
                     </button>
@@ -1023,7 +1023,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     max={evalScoreType === 'cgpa' ? '4.0' : '100'}
                     value={evalScoreVal}
                     onChange={(e) => setEvalScoreVal(e.target.value)}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-mono font-bold text-slate-800 focus:outline-none focus:border-[#1F4096]"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-mono font-bold text-slate-800 focus:outline-none focus:border-[#3157E6]"
                   />
                   <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] text-slate-400 font-bold uppercase tracking-wider font-mono">
                     {evalScoreType === 'cgpa' ? '/ 4.0' : '% Out of 100'}
@@ -1038,7 +1038,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   <select
                     value={evalEnglishTest}
                     onChange={(e) => setEvalEnglishTest(e.target.value)}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-3 text-[10.5px] font-black text-slate-800 focus:outline-none focus:border-[#1F4096] cursor-pointer"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-3 text-[10.5px] font-black text-slate-800 focus:outline-none focus:border-[#3157E6] cursor-pointer"
                   >
                     <option value="IELTS (Academic)">IELTS</option>
                     <option value="PTE Academic">PTE</option>
@@ -1056,7 +1056,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     placeholder={evalEnglishTest === 'No Test Yet' ? 'N/A' : 'e.g. 6.5'}
                     value={evalEnglishTest === 'No Test Yet' ? '' : evalEnglishScore}
                     onChange={(e) => setEvalEnglishScore(e.target.value)}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-mono font-bold text-slate-800 focus:outline-none focus:border-[#1F4096] disabled:opacity-50"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-mono font-bold text-slate-800 focus:outline-none focus:border-[#3157E6] disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -1067,7 +1067,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <select
                   value={evalLevel}
                   onChange={(e) => setEvalLevel(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-bold text-slate-800 focus:outline-none focus:border-[#1F4096] cursor-pointer"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-bold text-slate-800 focus:outline-none focus:border-[#3157E6] cursor-pointer"
                 >
                   <option value="Undergraduate (Bachelor's/Diploma)">Undergraduate (Bachelor / Diploma)</option>
                   <option value="Postgraduate (Master's/MBA)">Postgraduate (Master / MBA)</option>
@@ -1080,7 +1080,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 type="button"
                 onClick={runEvaluationDiagnostic}
                 disabled={isEvaluating}
-                className="w-full bg-slate-900 text-white hover:bg-[#1F4096] transition-all py-3.5 rounded-xl text-xs font-black tracking-widest uppercase cursor-pointer"
+                className="w-full bg-slate-900 text-white hover:bg-[#3157E6] transition-all py-3.5 rounded-xl text-xs font-black tracking-widest uppercase cursor-pointer"
               >
                 {isEvaluating ? 'AUDITING COMPLIANCE...' : 'RUN SCHOLARSHIP DIAGNOSTIC'}
               </button>
@@ -1091,7 +1091,7 @@ export default function Home({ onNavigate }: HomeProps) {
               
               {!evalDone && !isEvaluating && (
                 <div className="bg-white border border-slate-200/80 rounded-3xl p-8 text-center flex flex-col items-center justify-center min-h-[380px] space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center text-[#1F4096]">
+                  <div className="w-16 h-16 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center text-[#3157E6]">
                     <Calculator className="w-8 h-8" />
                   </div>
                   <h4 className="text-base font-black text-slate-800 uppercase tracking-wider">Diagnostic Area Ready</h4>
@@ -1103,10 +1103,10 @@ export default function Home({ onNavigate }: HomeProps) {
 
               {isEvaluating && (
                 <div className="bg-white border border-slate-200/80 rounded-3xl p-8 text-center flex flex-col items-center justify-center min-h-[380px] space-y-6">
-                  <div className="w-12 h-12 rounded-full border-4 border-[#1F4096]/20 border-t-[#1F4096] animate-spin" />
+                  <div className="w-12 h-12 rounded-full border-4 border-[#3157E6]/20 border-t-[#3157E6] animate-spin" />
                   <div className="space-y-1.5">
                     <h4 className="text-sm font-black text-slate-800 uppercase tracking-wider">Processing Profiles...</h4>
-                    <p className="text-[11px] text-[#1F4096] font-bold uppercase tracking-widest animate-pulse">Running GTE / CS Compliance Audit</p>
+                    <p className="text-[11px] text-[#3157E6] font-bold uppercase tracking-widest animate-pulse">Running GTE / CS Compliance Audit</p>
                   </div>
                 </div>
               )}
@@ -1118,7 +1118,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   <div className="space-y-6">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-100 pb-4">
                       <div>
-                        <span className="text-[9px] text-[#1F4096] font-black uppercase tracking-widest">Diagnostic Verdict</span>
+                        <span className="text-[9px] text-[#3157E6] font-black uppercase tracking-widest">Diagnostic Verdict</span>
                         <h4 className="text-xl font-extrabold text-slate-900">
                           {getEvaluationResult().suitability}
                         </h4>
@@ -1131,7 +1131,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                       <div className="space-y-1 bg-slate-50/75 border border-slate-150 p-4 rounded-2xl">
                         <span className="block text-[10px] text-slate-400 uppercase font-black tracking-wider">Estimated Scholarship</span>
-                        <span className="block text-sm font-black text-[#1F4096]">
+                        <span className="block text-sm font-black text-[#3157E6]">
                           {getEvaluationResult().eligibility}
                         </span>
                       </div>
@@ -1153,7 +1153,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
                     {/* Target Universities matching the evaluation */}
                     <div className="space-y-2 text-left">
-                      <span className="block text-[10px] text-[#1F4096] uppercase font-black tracking-widest">Recommended Institutions:</span>
+                      <span className="block text-[10px] text-[#3157E6] uppercase font-black tracking-widest">Recommended Institutions:</span>
                       <div className="flex flex-wrap gap-2">
                         {getEvaluationResult().targetUnis.map((uni, index) => (
                           <div 
@@ -1174,7 +1174,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">PRE-CLASSIFICATION ID: RC-{Math.floor(1000 + Math.random() * 9000)}</p>
                     <button
                       onClick={() => handleInquireUniversity(evalCountry, `Scholarship Inquiry (${getEvaluationResult().eligibility}) Grade: ${evalScoreVal} ${evalScoreType.toUpperCase()}`)}
-                      className="w-full sm:w-auto bg-[#1F4096] hover:bg-[#2563EB] text-white text-[11px] font-black tracking-widest uppercase px-6 py-3 rounded-xl transition-all cursor-pointer shadow-sm shadow-[#1F4096]/10"
+                      className="w-full sm:w-auto bg-[#3157E6] hover:bg-[#3157E6] text-white text-[11px] font-black tracking-widest uppercase px-6 py-3 rounded-xl transition-all cursor-pointer shadow-sm shadow-[#3157E6]/10"
                     >
                       Apply For This Scholarship
                     </button>
@@ -1194,7 +1194,7 @@ export default function Home({ onNavigate }: HomeProps) {
       {/* SECTION D: WHY CHOOSE RAHBAR SYSTEM */}
       <section className="py-24 bg-slate-50 border-y border-slate-200 relative" id="why-choose-us-section">
         {/* Glow decorative spot */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#1F4096]/3 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#3157E6]/3 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
@@ -1219,7 +1219,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 id={`service-pillar-${srv.id}`}
               >
                 {/* Custom circular wrapper */}
-                <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#1F4096] border border-blue-100 flex items-center justify-center mb-6 group-hover:bg-[#1F4096] group-hover:text-white group-hover:scale-105 transition-all">
+                <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#3157E6] border border-blue-100 flex items-center justify-center mb-6 group-hover:bg-[#3157E6] group-hover:text-white group-hover:scale-105 transition-all">
                   <GraduationCap className="w-6 h-6" />
                 </div>
 
@@ -1242,7 +1242,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="max-w-7xl mx-auto px-4">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/20">
+            <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/20">
               Methodology Flow
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
@@ -1267,7 +1267,7 @@ export default function Home({ onNavigate }: HomeProps) {
               >
                 <div>
                   {/* Step counter badge */}
-                  <span className="inline-flex w-10 h-10 rounded-full bg-slate-50 border-2 border-[#1F4096] text-slate-800 text-xs font-black items-center justify-center mb-4 shadow-sm">
+                  <span className="inline-flex w-10 h-10 rounded-full bg-slate-50 border-2 border-[#3157E6] text-slate-800 text-xs font-black items-center justify-center mb-4 shadow-sm">
                     {step.step}
                   </span>
                   
@@ -1288,11 +1288,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* SECTION E_SUB_1: SUCCESS STORIES / ALUMNI TRUST DECK */}
       <section className="py-24 bg-slate-50 border-t border-slate-200 relative" id="success-stories-section">
-        <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] bg-[#1F4096]/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] bg-[#3157E6]/5 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/20 inline-block">
+            <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/20 inline-block">
               Cadet Vouching Index
             </span>
             <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 uppercase">
@@ -1343,17 +1343,17 @@ export default function Home({ onNavigate }: HomeProps) {
                       setIsMockPlaying(true);
                       setMockProgress(20);
                     }}
-                    className="w-20 h-20 rounded-full bg-white/95 hover:bg-white text-[#1F4096] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer group/btn"
+                    className="w-20 h-20 rounded-full bg-white/95 hover:bg-white text-[#3157E6] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer group/btn"
                     title="Play cadet success video"
                     id="play-cadet-button"
                   >
-                    <Play className="w-8 h-8 fill-[#1F4096] text-[#1F4096] translate-x-0.5" />
+                    <Play className="w-8 h-8 fill-[#3157E6] text-[#3157E6] translate-x-0.5" />
                   </button>
                 </div>
 
                 {/* Info Overlay at Bottom */}
                 <div className="p-6 relative z-10 text-white space-y-1">
-                  <span className="block text-[10px] uppercase font-black tracking-widest text-[#1F4096]">Featured Admissions Dispatch</span>
+                  <span className="block text-[10px] uppercase font-black tracking-widest text-[#3157E6]">Featured Admissions Dispatch</span>
                   <p className="text-xl font-black leading-tight">Zainab Fatima (Lahore to United Kingdom)</p>
                   <p className="text-xs text-slate-350 font-semibold">Undergraduate Lead at Hertfordshire • M.Sc Data Science</p>
                 </div>
@@ -1421,7 +1421,7 @@ export default function Home({ onNavigate }: HomeProps) {
                         setIsMockPlaying(true);
                         setMockProgress(30);
                       }}
-                      className="text-left text-[9.5px] text-[#1F4096] hover:text-[#2563EB] font-black uppercase tracking-widest pt-2 flex items-center gap-1 transition-colors cursor-pointer"
+                      className="text-left text-[9.5px] text-[#3157E6] hover:text-[#3157E6] font-black uppercase tracking-widest pt-2 flex items-center gap-1 transition-colors cursor-pointer"
                     >
                       <Play className="w-3 h-3 fill-current" />
                       Open Verified Path Log
@@ -1441,7 +1441,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/20 inline-block">
+            <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/20 inline-block">
               Intel Registry & Maps
             </span>
             <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 uppercase animate-fade-in">
@@ -1510,7 +1510,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
                   {/* Body Content */}
                   <div className="px-6 py-2 space-y-2">
-                    <h3 className="text-sm md:text-base font-extrabold text-slate-900 leading-snug group-hover:text-[#1F4096] transition-colors line-clamp-2">
+                    <h3 className="text-sm md:text-base font-extrabold text-slate-900 leading-snug group-hover:text-[#3157E6] transition-colors line-clamp-2">
                       {post.title}
                     </h3>
                     <p className="text-xs text-slate-505 leading-relaxed font-semibold line-clamp-3">
@@ -1526,7 +1526,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   </span>
                   <button
                     onClick={() => handleInquireUniversity('United Kingdom', `Insight callback from portal: ${post.title}`)}
-                    className="inline-flex items-center gap-1 text-xs text-[#1F4096] hover:text-[#2563EB] font-black uppercase tracking-widest transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1 text-xs text-[#3157E6] hover:text-[#3157E6] font-black uppercase tracking-widest transition-colors cursor-pointer"
                   >
                     <span>Read Guide</span>
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -1547,11 +1547,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* SECTION E_SUB_3: FREQUENTLY ASKED QUESTIONS (FAQ) */}
       <section className="py-24 bg-slate-50 border-t border-slate-200 relative" id="faq-accordions-portal">
-        <div className="absolute top-1/3 -left-32 w-80 h-80 bg-[#1F4096]/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/3 -left-32 w-80 h-80 bg-[#3157E6]/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 z-10 relative">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/20 inline-block">
+            <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/20 inline-block">
               Lahore Desk counseling base
             </span>
             <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 uppercase">
@@ -1571,7 +1571,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 onClick={() => { setFaqCategory(segment); setOpenFaqIndex(null); }}
                 className={`px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all cursor-pointer border ${
                   faqCategory === segment
-                    ? 'bg-[#1F4096] text-white border-[#1F4096] shadow-sm'
+                    ? 'bg-[#3157E6] text-white border-[#3157E6] shadow-sm'
                     : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-350'
                 }`}
               >
@@ -1598,8 +1598,8 @@ export default function Home({ onNavigate }: HomeProps) {
                     <span className="font-extrabold text-[#111827] text-sm md:text-base leading-snug">
                       {item.question}
                     </span>
-                    <span className={`w-8 h-8 rounded-full border border-slate-150 flex items-center justify-center text-slate-500 shrink-0 transition-transform duration-300 ${isOpen ? 'bg-[#1F4096]/10 border-[#1F4096]/20 text-[#1F4096]' : ''}`}>
-                      {isOpen ? <Minus className="w-4 h-4 text-[#1F4096]" /> : <Plus className="w-4 h-4 text-slate-500" />}
+                    <span className={`w-8 h-8 rounded-full border border-slate-150 flex items-center justify-center text-slate-500 shrink-0 transition-transform duration-300 ${isOpen ? 'bg-[#3157E6]/10 border-[#3157E6]/20 text-[#3157E6]' : ''}`}>
+                      {isOpen ? <Minus className="w-4 h-4 text-[#3157E6]" /> : <Plus className="w-4 h-4 text-slate-500" />}
                     </span>
                   </button>
 
@@ -1631,7 +1631,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping" />
-                <span className="text-[10px] font-mono uppercase font-black tracking-widest text-[#1F4096] select-none">
+                <span className="text-[10px] font-mono uppercase font-black tracking-widest text-[#3157E6] select-none">
                   SECURE OUTCOME VIDEO FEED
                 </span>
               </div>
@@ -1662,16 +1662,16 @@ export default function Home({ onNavigate }: HomeProps) {
                 
                 <div className="relative z-10 flex flex-col items-center justify-center space-y-4">
                   {isMockPlaying ? (
-                    <div className="w-16 h-16 rounded-full bg-[#1F4096] flex items-center justify-center text-white scale-110 shadow-2xl animate-pulse">
+                    <div className="w-16 h-16 rounded-full bg-[#3157E6] flex items-center justify-center text-white scale-110 shadow-2xl animate-pulse">
                       <Clock className="w-8 h-8 text-white animate-spin" />
                     </div>
                   ) : (
                     <button 
                       onClick={() => setIsMockPlaying(true)}
-                      className="w-16 h-16 rounded-full bg-white text-[#1F4096] flex items-center justify-center shadow-xl hover:scale-110 transition-transform cursor-pointer"
+                      className="w-16 h-16 rounded-full bg-white text-[#3157E6] flex items-center justify-center shadow-xl hover:scale-110 transition-transform cursor-pointer"
                       title="Continue playback"
                     >
-                      <Play className="w-8 h-8 fill-[#1F4096] text-[#1F4096] translate-x-0.5" />
+                      <Play className="w-8 h-8 fill-[#3157E6] text-[#3157E6] translate-x-0.5" />
                     </button>
                   )}
                   <span className="text-[11px] text-slate-100 font-mono font-bold px-4 py-1.5 bg-slate-900/80 rounded-full border border-slate-700/60 shadow-md backdrop-blur-sm select-none">
@@ -1684,7 +1684,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <div className="relative z-20 px-4 pb-2">
                 <div className="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden cursor-pointer">
                   <div 
-                    className="h-full bg-[#1F4096] transition-all" 
+                    className="h-full bg-[#3157E6] transition-all" 
                     style={{ width: `${mockProgress}%` }}
                   />
                 </div>
@@ -1695,7 +1695,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 <div className="flex items-center gap-4 text-xs font-semibold">
                   <button 
                     onClick={() => setIsMockPlaying(!isMockPlaying)}
-                    className="hover:text-[#3B62D1] transition-colors cursor-pointer font-bold text-xs"
+                    className="hover:text-[#4E72FA] transition-colors cursor-pointer font-bold text-xs"
                   >
                     {isMockPlaying ? "Pause Track" : "Resume Track"}
                   </button>
@@ -1713,14 +1713,14 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Transcript detail area */}
             <div className="p-6 space-y-4 bg-white text-left">
               <div>
-                <span className="text-[10px] text-[#1F4096] uppercase font-black tracking-widest font-mono block">Vetted Case Transcripts</span>
+                <span className="text-[10px] text-[#3157E6] uppercase font-black tracking-widest font-mono block">Vetted Case Transcripts</span>
                 <h4 className="text-lg font-black text-slate-900 mt-1 leading-tight">
                   {activeVideoStory.studentName} — Study Permit Success Diary
                 </h4>
                 <p className="text-xs text-slate-450 font-bold">{activeVideoStory.program} • {activeVideoStory.universityAdmitted}</p>
               </div>
               
-              <p className="text-xs text-slate-550 leading-relaxed font-semibold italic border-l-2 border-[#1F4096]/30 pl-4 py-1.5">
+              <p className="text-xs text-slate-550 leading-relaxed font-semibold italic border-l-2 border-[#3157E6]/30 pl-4 py-1.5">
                 "{activeVideoStory.testimony}"
               </p>
 
@@ -1733,7 +1733,7 @@ export default function Home({ onNavigate }: HomeProps) {
                     setIsMockPlaying(false);
                     setActiveVideoStory(null);
                   }}
-                  className="bg-[#1F4096] hover:bg-[#2563EB] text-white text-[10.5px] font-black tracking-widest uppercase px-5 py-2.5 rounded-xl transition-all cursor-pointer"
+                  className="bg-[#3157E6] hover:bg-[#3157E6] text-white text-[10.5px] font-black tracking-widest uppercase px-5 py-2.5 rounded-xl transition-all cursor-pointer"
                 >
                   Verify Admission Course
                 </button>
@@ -1751,7 +1751,7 @@ export default function Home({ onNavigate }: HomeProps) {
             
             {/* Left Content Column */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="inline-flex items-center gap-1.5 bg-blue-50 text-[#1F4096] px-2.5 py-1 rounded-full text-xs font-bold border border-blue-100 shadow-sm">
+              <div className="inline-flex items-center gap-1.5 bg-blue-50 text-[#3157E6] px-2.5 py-1 rounded-full text-xs font-bold border border-blue-100 shadow-sm">
                 <Award className="w-3.5 h-3.5 text-yellow-500 animate-pulse" />
                 <span>Merit Scholarships Available</span>
               </div>
@@ -1797,7 +1797,7 @@ export default function Home({ onNavigate }: HomeProps) {
               {/* Specific Location callout */}
               <div className="p-4 rounded-2xl bg-white border border-slate-200 text-xs text-slate-500 flex items-center justify-between shadow-sm">
                 <span className="font-medium">📍 Model Town, Lahore HQ Office</span>
-                <span className="font-bold text-[#1F4096]">Open Mon – Sat (10am - 6pm)</span>
+                <span className="font-bold text-[#3157E6]">Open Mon – Sat (10am - 6pm)</span>
               </div>
             </div>
 

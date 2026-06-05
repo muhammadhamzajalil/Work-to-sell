@@ -61,18 +61,18 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
           <div className="flex flex-wrap justify-center md:justify-start items-center gap-5">
             <a 
               href="tel:+923254008823" 
-              className="flex items-center gap-1.5 hover:text-[#1F4096] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#3157E6] transition-colors"
               id="top-phone-link"
             >
-              <Phone className="w-3.5 h-3.5 text-[#1F4096]" />
+              <Phone className="w-3.5 h-3.5 text-[#3157E6]" />
               <span className="font-semibold text-slate-700">+92 325 400 88 23</span>
             </a>
             <a 
               href="mailto:info@rahbarconsultants.com" 
-              className="flex items-center gap-1.5 hover:text-[#1F4096] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#3157E6] transition-colors"
               id="top-email-link"
             >
-              <Mail className="w-3.5 h-3.5 text-[#1F4096]" />
+              <Mail className="w-3.5 h-3.5 text-[#3157E6]" />
               <span>info@rahbarconsultants.com</span>
             </a>
           </div>
@@ -82,7 +82,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
               <MapPin className="w-3.5 h-3.5 text-red-500" />
               <span>Model Town, Lahore, Pakistan</span>
             </span>
-            <div className="flex items-center gap-1.5 bg-[#1F4096]/10 text-[#2563EB] px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase border border-[#1F4096]/25">
+            <div className="flex items-center gap-1.5 bg-[#3157E6]/10 text-[#3157E6] px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase border border-[#3157E6]/25">
               <Sparkles className="w-2.5 h-2.5" />
               <span>Official University Partner</span>
             </div>
@@ -103,21 +103,15 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
           <a 
             href="#/" 
             onClick={(e) => handleLinkClick('home', e)}
-            className="flex items-center gap-2.5 group"
+            className="flex items-center gap-1.5 group select-none"
             id="brand-logo-anchor"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#1F4096] to-[#3B62D1] flex items-center justify-center shadow-[0_4px_15px_rgba(31,64,150,0.25)] group-hover:scale-105 transition-all duration-300 animate-pulse-slow">
-              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-black text-slate-900 tracking-tight leading-none">
-                RAHBAR
+            <div className="flex flex-col items-start leading-none group-hover:scale-[1.03] transition-all duration-200">
+              <span className="text-[28px] font-black tracking-[-0.03em] text-[#3157E6] leading-[0.8] lowercase font-display">
+                rahbar
               </span>
-              <span className="text-[10px] text-[#1F4096] font-bold tracking-widest uppercase mt-0.5 whitespace-nowrap">
-                Consultants
+              <span className="text-[11px] font-bold tracking-[0.05em] text-[#3157E6]/95 leading-none lowercase pl-5 mt-1 font-display">
+                consultants
               </span>
             </div>
           </a>
@@ -130,7 +124,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
               onClick={(e) => handleLinkClick('home', e)}
               className={`px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-lg border ${
                 currentRoute === 'home' 
-                  ? 'text-[#1F4096] bg-[#1F4096]/5 border-[#1F4096]/20' 
+                  ? 'text-[#3157E6] bg-[#3157E6]/5 border-[#3157E6]/20' 
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-transparent'
               }`}
             >
@@ -142,7 +136,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
               onClick={(e) => handleLinkClick('about', e)}
               className={`px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-lg border ${
                 currentRoute === 'about' 
-                  ? 'text-[#1F4096] bg-[#1F4096]/5 border-[#1F4096]/20' 
+                  ? 'text-[#3157E6] bg-[#3157E6]/5 border-[#3157E6]/20' 
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-transparent'
               }`}
             >
@@ -157,7 +151,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
             >
               <button 
                 className={`px-4 py-2 text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all duration-200 rounded-lg flex items-center gap-1.5 ${
-                  currentRoute.startsWith('destination_') ? 'text-[#1F4096] bg-[#1F4096]/5 border-[#1F4096]/20' : ''
+                  currentRoute.startsWith('destination_') ? 'text-[#3157E6] bg-[#3157E6]/5 border-[#3157E6]/20' : ''
                 }`}
                 id="mega-menu-trigger-button"
               >
@@ -174,7 +168,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
                 }`}
               >
                 <div className="col-span-3 flex justify-between items-center pb-3 border-b border-slate-100 mb-1">
-                  <span className="text-xs uppercase bg-[#1F4096]/10 text-[#1F4096] px-2.5 py-1 rounded-full font-bold tracking-wider">
+                  <span className="text-xs uppercase bg-[#3157E6]/10 text-[#3157E6] px-2.5 py-1 rounded-full font-bold tracking-wider">
                     Select a Study Destination
                   </span>
                   <span className="text-xs text-slate-500 flex items-center gap-1 font-medium">
@@ -192,7 +186,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
                   >
                     <span className="text-2xl mt-0.5 select-none">{dest.flag}</span>
                     <div className="flex flex-col">
-                      <span className="text-sm font-bold text-slate-800 group-hover:text-[#1F4096] transition-colors">
+                      <span className="text-sm font-bold text-slate-800 group-hover:text-[#3157E6] transition-colors">
                         {dest.name}
                       </span>
                       <span className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">
@@ -209,7 +203,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
               onClick={(e) => handleLinkClick('scholarships', e)}
               className={`px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-lg border ${
                 currentRoute === 'scholarships' 
-                  ? 'text-[#1F4096] bg-[#1F4096]/5 border-[#1F4096]/20' 
+                  ? 'text-[#3157E6] bg-[#3157E6]/5 border-[#3157E6]/20' 
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-transparent'
               }`}
             >
@@ -221,7 +215,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
               onClick={(e) => handleLinkClick('success-stories', e)}
               className={`px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-lg border ${
                 currentRoute === 'success-stories' 
-                  ? 'text-[#1F4096] bg-[#1F4096]/5 border-[#1F4096]/20' 
+                  ? 'text-[#3157E6] bg-[#3157E6]/5 border-[#3157E6]/20' 
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-transparent'
               }`}
             >
@@ -233,7 +227,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
               onClick={(e) => handleLinkClick('contact', e)}
               className={`px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-lg border ${
                 currentRoute === 'contact' 
-                  ? 'text-[#1F4096] bg-[#1F4096]/5 border-[#1F4096]/20' 
+                  ? 'text-[#3157E6] bg-[#3157E6]/5 border-[#3157E6]/20' 
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-transparent'
               }`}
             >
@@ -246,7 +240,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
             <a 
               href="#/contact"
               onClick={(e) => handleLinkClick('contact', e)}
-              className="bg-gradient-to-r from-[#1F4096] to-[#3B62D1] text-white text-xs font-bold tracking-wider uppercase px-5 py-3 rounded-full hover:shadow-[0_4px_15px_rgba(31,64,150,0.35)] transition-all transform hover:-translate-y-0.5 flex items-center gap-1.5"
+              className="bg-gradient-to-r from-[#3157E6] to-[#4E72FA] text-white text-xs font-bold tracking-wider uppercase px-5 py-3 rounded-full hover:shadow-[0_4px_15px_rgba(49,87,230,0.35)] transition-all transform hover:-translate-y-0.5 flex items-center gap-1.5"
               id="header-cta-book-consultation"
             >
               Book Free Consultation
@@ -280,7 +274,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
                 href={`#/${item.route}`}
                 onClick={(e) => handleLinkClick(item.route, e)}
                 className={`py-2 text-lg font-bold border-b border-slate-100 pb-2 transition-colors ${
-                  currentRoute === item.route ? 'text-[#1F4096]' : 'text-slate-800 hover:text-slate-900'
+                  currentRoute === item.route ? 'text-[#3157E6]' : 'text-slate-800 hover:text-slate-900'
                 }`}
               >
                 {item.label}
@@ -289,7 +283,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
 
             {/* Destinations sub-list in mobile view */}
             <div className="pt-2">
-              <span className="text-xs uppercase bg-[#1F4096]/10 text-[#1F4096] px-2.5 py-1 rounded-full font-bold tracking-wider">
+              <span className="text-xs uppercase bg-[#3157E6]/10 text-[#3157E6] px-2.5 py-1 rounded-full font-bold tracking-wider">
                 Study Destinations
               </span>
               <div className="grid grid-cols-2 gap-2 mt-4">
@@ -316,13 +310,13 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
             href="tel:+923254008823"
             className="flex items-center justify-center gap-2 py-3 rounded-xl bg-white border border-slate-200 text-slate-850 font-bold text-sm text-slate-705 shadow-sm"
           >
-            <Phone className="w-4 h-4 text-[#1F4096]" />
+            <Phone className="w-4 h-4 text-[#3157E6]" />
             Call: +92 325 400 88 23
           </a>
           <a
             href="#/contact"
             onClick={(e) => handleLinkClick('contact', e)}
-            className="bg-gradient-to-r from-[#1F4096] to-[#3B62D1] text-white font-bold text-sm py-3.5 rounded-xl text-center shadow-[0_4px_15px_rgba(31,64,150,0.25)]"
+            className="bg-gradient-to-r from-[#3157E6] to-[#4E72FA] text-white font-bold text-sm py-3.5 rounded-xl text-center shadow-[0_4px_15px_rgba(49,87,230,0.25)]"
           >
             Book Free Appointment
           </a>

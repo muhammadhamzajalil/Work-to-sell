@@ -32,7 +32,7 @@ export const UniversityLogoMarquee: React.FC<UniversityLogoMarqueeProps> = ({ pa
           {firstRowItems.map((partner, idx) => (
             <div
               key={`row1-${idx}`}
-              className="text-slate-700 bg-white text-xs md:text-sm font-semibold tracking-wider font-mono hover:text-[#1F4096] px-4 py-2.5 rounded-xl border border-slate-200 hover:border-slate-300 cursor-default transition-all shadow-sm shrink-0"
+              className="text-slate-700 bg-white text-xs md:text-sm font-semibold tracking-wider font-mono hover:text-[#3157E6] px-4 py-2.5 rounded-xl border border-slate-200 hover:border-slate-300 cursor-default transition-all shadow-sm shrink-0"
               title={`Official application processing pathway to ${partner.name}`}
             >
               🎓 {partner.logotext}
@@ -47,7 +47,7 @@ export const UniversityLogoMarquee: React.FC<UniversityLogoMarqueeProps> = ({ pa
           {secondRowItems.map((partner, idx) => (
             <div
               key={`row2-${idx}`}
-              className="text-slate-700 bg-white text-xs md:text-sm font-semibold tracking-wider font-mono hover:text-[#1F4096] px-4 py-2.5 rounded-xl border border-slate-200 hover:border-slate-300 cursor-default transition-all shadow-sm shrink-0"
+              className="text-slate-700 bg-white text-xs md:text-sm font-semibold tracking-wider font-mono hover:text-[#3157E6] px-4 py-2.5 rounded-xl border border-slate-200 hover:border-slate-300 cursor-default transition-all shadow-sm shrink-0"
               title={`Official application processing pathway to ${partner.name}`}
             >
               🎓 {partner.logotext}

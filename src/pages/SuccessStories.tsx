@@ -29,10 +29,10 @@ export default function SuccessStories() {
       
       {/* Structural Header intro panel */}
       <section className="relative py-12 md:py-16 overflow-hidden border-b border-slate-150">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#3B62D1]/3 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#4E72FA]/3 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 z-10 relative text-center space-y-4">
-          <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/20">
+          <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/20">
             Student Achievements
           </span>
           <h1 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900">
@@ -50,7 +50,7 @@ export default function SuccessStories() {
         {/* Country filters switcher bar */}
         <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-205 shadow-sm">
           <div className="flex items-center gap-2">
-            <Users className="w-4 h-4 text-[#1F4096]" />
+            <Users className="w-4 h-4 text-[#3157E6]" />
             <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Filter By Dest:</span>
           </div>
 
@@ -61,7 +61,7 @@ export default function SuccessStories() {
                 onClick={() => setActiveCountryFilter(country)}
                 className={`text-xs font-bold px-3 py-1.5 rounded-lg border transition-all duration-200 cursor-pointer ${
                   activeCountryFilter === country 
-                    ? 'bg-[#1F4096] text-white border-[#1F4096]' 
+                    ? 'bg-[#3157E6] text-white border-[#3157E6]' 
                     : 'bg-white text-slate-600 border-slate-200 hover:text-slate-900 hover:bg-slate-50'
                 }`}
                 id={`filter-story-${idx}`}
@@ -118,7 +118,7 @@ export default function SuccessStories() {
                   </div>
                   <div>
                     <span className="text-[10px] text-slate-400 uppercase font-black block mb-1">Language Band Marks</span>
-                    <span className="font-bold text-[#1F4096] bg-blue-50 py-1.5 px-2.5 rounded-lg border border-[#1F4096]/10 block w-full text-center">
+                    <span className="font-bold text-[#3157E6] bg-blue-50 py-1.5 px-2.5 rounded-lg border border-[#3157E6]/10 block w-full text-center">
                       ⚡ {story.testScoreMetric}
                     </span>
                   </div>

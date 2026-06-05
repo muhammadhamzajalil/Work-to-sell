@@ -18,10 +18,10 @@ export default function Contact() {
       
       {/* Structural Title Intro Section */}
       <section className="relative py-12 md:py-16 overflow-hidden border-b border-slate-150">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#1F4096]/3 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#3157E6]/3 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 z-10 relative text-center space-y-4">
-          <span className="bg-[#1F4096]/10 text-[#1F4096] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#1F4096]/20">
+          <span className="bg-[#3157E6]/10 text-[#3157E6] text-xs font-black tracking-widest uppercase py-1.5 px-4 rounded-full border border-[#3157E6]/20">
             Reach Out Today
           </span>
           <h1 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 animate-pulse-slow">
@@ -53,10 +53,10 @@ export default function Contact() {
             {/* Click-to-call */}
             <a 
               href="tel:+923254008823"
-              className="p-5 rounded-2xl bg-slate-50 border border-slate-205 hover:border-[#1F4096] hover:bg-white hover:shadow-md transition-all text-left flex items-start gap-4 shadow-sm"
+              className="p-5 rounded-2xl bg-slate-50 border border-slate-205 hover:border-[#3157E6] hover:bg-white hover:shadow-md transition-all text-left flex items-start gap-4 shadow-sm"
               id="contact-call-now-box"
             >
-              <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#1F4096] border border-blue-100 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#3157E6] border border-blue-100 flex items-center justify-center shrink-0">
                 <Phone className="w-5 h-5" />
               </div>
               <div className="font-semibold">
@@ -98,10 +98,10 @@ export default function Contact() {
             </div>
 
             <div className="flex gap-3 items-center border-b border-slate-150 pb-4">
-              <Mail className="w-5 h-5 text-[#1F4096] shrink-0" />
+              <Mail className="w-5 h-5 text-[#3157E6] shrink-0" />
               <div>
                 <span className="font-black block text-slate-900 mb-1 uppercase text-[10px] tracking-wider text-slate-450">Corporate Email</span>
-                <a href="mailto:info@rahbarconsultants.com" className="text-[#1F4096] font-bold hover:underline">
+                <a href="mailto:info@rahbarconsultants.com" className="text-[#3157E6] font-bold hover:underline">
                   info@rahbarconsultants.com
                 </a>
               </div>
@@ -120,10 +120,10 @@ export default function Contact() {
           <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-sm relative overflow-hidden space-y-4">
             <div className="flex items-center justify-between pb-2 border-b border-slate-150 font-bold">
               <div className="flex items-center gap-2">
-                <Building className="w-4 h-4 text-[#1F4096]" />
+                <Building className="w-4 h-4 text-[#3157E6]" />
                 <span className="text-xs font-black text-slate-900 uppercase tracking-wider">Office Location Coordinates</span>
               </div>
-              <span className="text-[10px] bg-blue-50 text-[#1F4096] px-2 py-0.5 rounded-full border border-blue-100 uppercase">
+              <span className="text-[10px] bg-blue-50 text-[#3157E6] px-2 py-0.5 rounded-full border border-blue-100 uppercase">
                 Asad Tower
               </span>
             </div>
@@ -149,7 +149,7 @@ export default function Contact() {
                 <MapPin className="w-8 h-8 text-red-500 relative z-10 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]" />
                 
                 {/* Address Popover bubble */}
-                <div className="bg-white border border-[#1F4096] py-1.5 px-3 rounded-lg text-[9px] text-slate-900 font-extrabold select-none mt-1 whitespace-nowrap shadow-md">
+                <div className="bg-white border border-[#3157E6] py-1.5 px-3 rounded-lg text-[9px] text-slate-900 font-extrabold select-none mt-1 whitespace-nowrap shadow-md">
                   📍 Rahbar Consultants HQ
                 </div>
               </div>

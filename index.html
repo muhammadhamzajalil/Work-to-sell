@@ -1,9 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      // Defensive patch for environments where window.fetch is custom-intercepted as a read-only getter
+      try {
+        let originalFetch = window.fetch;
+        Object.defineProperty(window, 'fetch', {
+          get() {
+            return originalFetch;
+          },
+          set(val) {
+            originalFetch = val;
+          },
+          configurable: true,
+          enumerable: true
+        });
+      } catch (e) {
+        console.warn('Sandbox fetch assignment bypass failed to register', e);
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231F4096'%3E%3Cpath d='M22 10v6M2 10l10-5 10 5-10 5z'/%3E%3Cpath d='M6 12v5c0 2 2 3 6 3s6-1 6-3v-5'/%3E%3C/svg%3E" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233157E6'%3E%3Cpath d='M22 10v6M2 10l10-5 10 5-10 5z'/%3E%3Cpath d='M6 12v5c0 2 2 3 6 3s6-1 6-3v-5'/%3E%3C/svg%3E" />
     <title>Rahbar Consultants - Gateway to Global Education</title>
   </head>
   <body>

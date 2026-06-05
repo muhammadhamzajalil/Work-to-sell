@@ -94,13 +94,13 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
         
         <h3 className="text-2xl font-black text-slate-900 mb-3">Consultation Registered!</h3>
         <p className="text-slate-600 text-sm leading-relaxed max-w-md mx-auto mb-6 font-medium">
-          Assalam-o-Alaikum, <span className="font-bold text-slate-800">{formData.fullName}</span>! We have received your profile details for <span className="text-[#1F4096] font-bold">{formData.destination}</span>. 
+          Assalam-o-Alaikum, <span className="font-bold text-slate-800">{formData.fullName}</span>! We have received your profile details for <span className="text-[#3157E6] font-bold">{formData.destination}</span>. 
         </p>
 
         <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 mb-6 text-xs text-slate-500 text-left space-y-2 font-medium">
           <div className="flex justify-between"><span className="text-slate-400">Contact Telephone:</span> <span className="text-slate-850 font-semibold font-mono">{formData.phone}</span></div>
           <div className="flex justify-between"><span className="text-slate-400">Qualification:</span> <span className="text-slate-850 font-semibold">{formData.qualification}</span></div>
-          <div className="flex justify-between"><span className="text-slate-400">Assigned Route:</span> <span className="text-[#1F4096] font-bold">Standard Fast-Track</span></div>
+          <div className="flex justify-between"><span className="text-slate-400">Assigned Route:</span> <span className="text-[#3157E6] font-bold">Standard Fast-Track</span></div>
         </div>
 
         <p className="text-xs text-emerald-700 font-bold bg-emerald-50 py-2 px-4 rounded-full inline-block border border-emerald-200">
@@ -119,7 +119,7 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
               message: ''
             });
           }}
-          className="mt-6 text-xs text-slate-450 underline hover:text-[#1F4096] transition-colors block mx-auto cursor-pointer"
+          className="mt-6 text-xs text-slate-450 underline hover:text-[#3157E6] transition-colors block mx-auto cursor-pointer"
         >
           Submit another inquiry
         </button>
@@ -130,8 +130,8 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
   return (
     <div className="bg-white border border-slate-150 p-6 md:p-8 rounded-3xl shadow-[0_12px_45px_rgba(0,0,0,0.05)] relative" id="consultation-form-wrapper">
       <div className="flex items-center gap-2 mb-4">
-        <span className="w-2.5 h-2.5 rounded-full bg-[#1F4096] animate-pulse" />
-        <span className="text-xs font-bold text-[#1F4096] uppercase tracking-widest">Instant Booking portal</span>
+        <span className="w-2.5 h-2.5 rounded-full bg-[#3157E6] animate-pulse" />
+        <span className="text-xs font-bold text-[#3157E6] uppercase tracking-widest">Instant Booking portal</span>
       </div>
       
       <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-2 leading-tight">
@@ -159,7 +159,7 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
             value={formData.fullName}
             onChange={handleInputChange}
             placeholder="e.g. Zain Ahmed"
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#1F4096] focus:bg-white transition-all placeholder:text-slate-400"
+            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#3157E6] focus:bg-white transition-all placeholder:text-slate-400"
           />
         </div>
 
@@ -175,7 +175,7 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
               value={formData.phone}
               onChange={handleInputChange}
               placeholder="e.g. +92 300 1234567"
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#1F4096] focus:bg-white transition-all placeholder:text-slate-400"
+              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#3157E6] focus:bg-white transition-all placeholder:text-slate-400"
             />
           </div>
 
@@ -190,7 +190,7 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
               value={formData.email}
               onChange={handleInputChange}
               placeholder="e.g. zain@gmail.com"
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#1F4096] focus:bg-white transition-all placeholder:text-slate-400"
+              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#3157E6] focus:bg-white transition-all placeholder:text-slate-400"
             />
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
               name="qualification"
               value={formData.qualification}
               onChange={handleInputChange}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#1F4096] focus:bg-white transition-all appearance-none cursor-pointer"
+              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#3157E6] focus:bg-white transition-all appearance-none cursor-pointer"
             >
               <option value="" disabled className="text-slate-400">Select qualification...</option>
               {qualificationsList.map((q, idx) => (
@@ -223,7 +223,7 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
               name="destination"
               value={formData.destination}
               onChange={handleInputChange}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#1F4096] focus:bg-white transition-all appearance-none cursor-pointer"
+              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#3157E6] focus:bg-white transition-all appearance-none cursor-pointer"
             >
               <option value="" disabled className="text-slate-400">Select preferred country...</option>
               {DESTINATIONS.map((dest) => (
@@ -246,7 +246,7 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
             value={formData.message}
             onChange={handleInputChange}
             placeholder="Tell us about your grades, IELTS scores, budget limits, or course targets..."
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#1F4096] focus:bg-white transition-all placeholder:text-slate-400 resize-none animate-pulse-slow"
+            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-805 focus:outline-none focus:border-[#3157E6] focus:bg-white transition-all placeholder:text-slate-400 resize-none animate-pulse-slow"
           />
         </div>
 
@@ -254,7 +254,7 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-[#1F4096] to-[#3B62D1] text-white text-xs font-black tracking-widest uppercase py-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_4px_15px_rgba(31,64,150,0.3)] hover:-translate-y-0.5 transition-all outline-none cursor-pointer disabled:opacity-50"
+          className="w-full bg-gradient-to-r from-[#3157E6] to-[#4E72FA] text-white text-xs font-black tracking-widest uppercase py-4 rounded-xl flex items-center justify-center gap-2 hover:shadow-[0_4px_15px_rgba(49,87,230,0.3)] hover:-translate-y-0.5 transition-all outline-none cursor-pointer disabled:opacity-50"
           id="lead-form-submit-btn"
         >
           {isSubmitting ? 'Registering details...' : 'Submit Profile for Assessment'}

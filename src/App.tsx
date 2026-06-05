@@ -1,12 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import DestinationDetail from './pages/DestinationDetail';
-import Scholarships from './pages/Scholarships';
-import SuccessStories from './pages/SuccessStories';
-import AboutAndServices from './pages/AboutAndServices';
-import Contact from './pages/Contact';
+
+const Home = lazy(() => import('./pages/Home'));
+const DestinationDetail = lazy(() => import('./pages/DestinationDetail'));
+const Scholarships = lazy(() => import('./pages/Scholarships'));
+const SuccessStories = lazy(() => import('./pages/SuccessStories'));
+const AboutAndServices = lazy(() => import('./pages/AboutAndServices'));
+const Contact = lazy(() => import('./pages/Contact'));
+
+const RouteLoader = () => (
+  <div className="flex flex-col items-center justify-center min-h-[60vh] py-12" id="route-skeleton-loader">
+    <div className="w-12 h-12 border-4 border-slate-100 border-t-[#3157E6] rounded-full animate-spin mb-4" />
+    <span className="text-xs font-semibold uppercase tracking-widest text-slate-400 animate-pulse font-mono">
+      loading portal...
+    </span>
+  </div>
+);
 
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState('home');
@@ -81,7 +91,9 @@ export default function App() {
 
       {/* Main page dynamic canvas container */}
       <main className="flex-1">
-        {renderActiveRoute()}
+        <Suspense fallback={<RouteLoader />}>
+          {renderActiveRoute()}
+        </Suspense>
       </main>
 
       {/* Corporate footer showing links and mobile-dock utility */}
