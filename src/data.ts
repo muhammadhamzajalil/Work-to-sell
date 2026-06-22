@@ -387,6 +387,92 @@ export const DESTINATIONS: Destination[] = [
         answer: 'It is the official graduate work permit giving you 24 months to work full-time after graduating with an honors degree in Ireland without any salary scale sponsorship limitations.'
       }
     ]
+  },
+  {
+    id: 'south-korea',
+    name: 'South Korea',
+    slug: 'south-korea',
+    flag: '🇰🇷',
+    tuitionRange: '₩3,000,000 – ₩8,000,000 / semester',
+    livingCostRange: '₩1,000,000 – ₩1,500,000 / month',
+    scholarshipsAvailable: 'Global Korea Scholarship (GKS) & 30% – 100% University Merit Awards',
+    workStudyTerms: '20 Hours/week during study + Unrestricted during vacations',
+    tagline: 'Cutting-Edge Technology, Global Pop Culture Leadership, and Generous State Sponsorships.',
+    imageTheme: 'https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&q=80&w=800',
+    countryOverview: 'South Korea is a premier global hub for electronics, digital media, automotive engineering, and biotechnology. Known for beautiful academic campuses, high-tech standard of living, and deep international support systems, students can prepare for incredible global roles at world-famous universities.',
+    coreAdvantages: [
+      'Access to high-profile industrial leaders like Samsung, Hyundai, and LG for post-grad careers.',
+      'Up to 100% tuition coverage support from the flagship Global Korea Scholarship (GKS) program.',
+      'Advanced high-tech research centers and beautiful, exceptionally safe modern urban campuses.',
+      'Generous part-time work pathways and post-study D-10 job seeker opportunities.'
+    ],
+    averageTuitionTable: [
+      { program: 'Undergraduate STEM & Tech Degrees', cost: '₩3,500,000 – ₩5,500,000 / semester' },
+      { program: 'Undergraduate Business & Humanities', cost: '₩3,000,000 – ₩4,500,000 / semester' },
+      { program: 'Postgraduate Master of Engineering', cost: '₩4,500,000 – ₩7,000,000 / semester' },
+      { program: 'Doctorate Research & Lab Focuses', cost: '₩5,000,000 – ₩8,000,000 / semester' }
+    ],
+    livingCostIndex: [
+      { item: 'Off-Campus Studio (One-Room Rent)', cost: '₩450,000 – ₩650,000' },
+      { item: 'Metro & Bus Transportation (Monthly)', cost: '₩55,000 – ₩75,000' },
+      { item: 'Campus Meal Plan / Local Dining (Monthly)', cost: '₩300,000 – ₩450,000' },
+      { item: 'High-Speed Web, Mobile & Floor Heating', cost: '₩90,000 – ₩150,000' }
+    ],
+    postStudyParameters: 'South Korean graduates can convert their student visa (D-2) to a Job Seeker Visa (D-10) for up to 2 years, allowing full-time internships and professional job scouting.',
+    topAcademicUnits: ['Seoul National University', 'Korea University', 'Yonsei University', 'KAIST', 'Hanyang University', 'Kyung Hee University'],
+    faqs: [
+      {
+        question: 'Do I need to be fluent in Korean to study in South Korea?',
+        answer: 'No! Many top universities offer fully English-medium tracks in computer engineering, business, and international relations. However, learning basic Korean is helpful for daily life and local careers.'
+      },
+      {
+        question: 'What is the Global Korea Scholarship (GKS)?',
+        answer: 'The GKS is a government-funded full scholarship that covers 100% of tuition, provides round-trip economy airfare, a monthly allowance, settlement grants, and a year of intensive Korean language study.'
+      }
+    ]
+  },
+  {
+    id: 'japan',
+    name: 'Japan',
+    slug: 'japan',
+    flag: '🇯🇵',
+    tuitionRange: '¥535,800 – ¥1,200,000 / year',
+    livingCostRange: '¥100,000 – ¥150,000 / month',
+    scholarshipsAvailable: 'MEXT Government Scholarships, JASSO Honors & 30% – 50% Tuition Waivers',
+    workStudyTerms: '28 Hours/week during study + Full-time during official vacation terms',
+    tagline: 'Elite Academy standards, High-Speed Shinkansen Infrastructure, and Pristine Safety Standards.',
+    imageTheme: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=800',
+    countryOverview: 'Japan houses many of the highest-rated academic and technological institutions in Asia. Highly praised for automotive technologies, precision robotics, game design, and material sciences, Japan blends ancient custom with hyper-modern living. It offers exceptional post-graduate career settlement paths and state scholarship support.',
+    coreAdvantages: [
+      'Exceptional global reputation of National universities offering top-tier researcher facilities.',
+      'Government-sponsored MEXT scholarships covering all tuition, travel and monthly living stipends.',
+      'Legalized student work permissions of up to 28 hours weekly to easily offset living costs.',
+      'Tremendous demand for international skilled graduates across tech, nursing, and business finance.'
+    ],
+    averageTuitionTable: [
+      { program: 'National Public University Degrees', cost: '¥535,800 – ¥820,000 / year' },
+      { program: 'Private Engineering & Applied Science', cost: '¥1,000,000 – ¥1,400,000 / year' },
+      { program: 'Graduate Master of Business Administration', cost: '¥850,000 – ¥1,300,000 / year' },
+      { program: 'Private Undergraduate Humanities/Arts', cost: '¥750,005 – ¥1,050,000 / year' }
+    ],
+    livingCostIndex: [
+      { item: 'Shared House / University Dorm Room', cost: '¥35,000 – ¥55,000' },
+      { item: 'Local Commuter Train Pass (Monthly)', cost: '¥6,000 – ¥10,000' },
+      { item: 'Supermarket Groceries & Meal Prep (Monthly)', cost: '¥35,000 – ¥45,000' },
+      { item: 'Water, Gas, Electricity & Mobile Contract', cost: '¥12,000 – ¥18,000' }
+    ],
+    postStudyParameters: 'Japan allows international graduates to apply for a 1-year Job Seeker Visa (convertible for up to 3 years), which can be converted into a standard Technical/Humanities work visa upon finding employment.',
+    topAcademicUnits: ['The University of Tokyo', 'Kyoto University', 'Osaka University', 'Tohoku University', 'Waseda University', 'Keio University'],
+    faqs: [
+      {
+        question: 'What is the MEXT Scholarship for Japan?',
+        answer: 'The MEXT Scholarship is a highly prestigious fully-funded government grant for international students. It covers 100% of college tuition, round-trip international flights, and provides a monthly living stipend.'
+      },
+      {
+        question: 'Can I study in Japan in English?',
+        answer: 'Yes! Under the Global 30 initiative, many of Japan’s elite universities offer complete undergraduate and postgraduate degree programs in English without requiring Japanese language prerequisites.'
+      }
+    ]
   }
 ];
 
@@ -450,6 +536,46 @@ export const SCHOLARSHIPS: Scholarship[] = [
     eligibility: 'HSSC / A-Levels with exceptional math, computing or business marks.',
     deadline: 'June & October Intakes',
     description: 'Bursaries dedicated to empowering digital skillsets, computer engineering, and AI development students.'
+  },
+  {
+    id: 'gks-south-korea',
+    title: 'Global Korea Scholarship (GKS) - Graduate & Undergraduate',
+    country: 'South Korea',
+    type: 'merit',
+    coverage: '100% Tuition, Monthly Allowance (₩900k-₩1m), Round-Trip Airfare, Medical Insurance, and Language Training',
+    eligibility: 'Intermediate/A-Levels or Bachelor degree with 80% or higher. Age under 25 (UG) or 40 (G).',
+    deadline: 'February (Undergraduate) / October (Graduate), Annually',
+    description: 'South Korea’s premier government fully-funded scholarship, designed to provide international students with deep academic immersion and cultural bridges.'
+  },
+  {
+    id: 'snu-global-scholar',
+    title: 'SNU Global Scholarship & Academic Excellence Awards',
+    country: 'South Korea',
+    type: 'merit',
+    coverage: '100% or 50% Tuition Fee Waiver & Optional living stipend of ₩500,000 / month',
+    eligibility: 'Outstanding academic record with GPA 3.6+ / 4.0 in previous studies. Recommendation required.',
+    deadline: 'Rolling with Admission Intakes',
+    description: 'Highly competitive merit awards offered directly by Seoul National University and participating top-tier universities for international scholars.'
+  },
+  {
+    id: 'mext-japan',
+    title: 'MEXT Government Scholarship Program (Monbukagakusho)',
+    country: 'Japan',
+    type: 'merit',
+    coverage: '100% Tuition Fee Coverage, Monthly Stipend (¥117k-¥145k), and Round-Trip Economy Airfare',
+    eligibility: 'High school graduates or university graduates under 35 with exceptional academic marks and research potential.',
+    deadline: 'May to June, Annually',
+    description: 'The premier fully-funded Japanese government scholarship promoting world-class engineering, humanities, and research excellence.'
+  },
+  {
+    id: 'jasso-honors',
+    title: 'JASSO International Student Honors Scholarship',
+    country: 'Japan',
+    type: 'merit',
+    coverage: '¥48,000 Monthly Living Stipend for up to 12 Months',
+    eligibility: 'Enrolled in a Japanese university, high academic performance, and demonstrated need or merit standing.',
+    deadline: 'October, Annually',
+    description: 'Japan Student Services Organization scholarship supporting self-supporting international candidates completing degrees in Japan.'
   }
 ];
 
@@ -508,6 +634,34 @@ export const SUCCESS_STORIES: SuccessStory[] = [
     visaTimeDays: 9,
     testimony: 'APU has beautiful high-tech systems. Study fees were affordable, and Rahbar Consultants handled my EMGS process in just two weeks.',
     avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
+    visaStatus: 'Approved'
+  },
+  {
+    id: 'story-south-korea',
+    studentName: 'Muhammad Ali',
+    fromCity: 'Lahore',
+    targetCountry: 'South Korea',
+    universityAdmitted: 'Seoul National University',
+    program: 'M.Sc. in Robotics & Control System',
+    gradesMetric: 'CGPA 3.75 / 4.0 (BS Mechatronics)',
+    testScoreMetric: 'IELTS 7.0 Overall',
+    visaTimeDays: 15,
+    testimony: 'Seoul National University academic culture is top notch. Rahbar Consultants guided my complete document authentication, Apostille process, and GKS scholarship folder preparation wonderfully!',
+    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200',
+    visaStatus: 'Approved'
+  },
+  {
+    id: 'story-japan',
+    studentName: 'Fatima Sana',
+    fromCity: 'Islamabad',
+    targetCountry: 'Japan',
+    universityAdmitted: 'The University of Tokyo',
+    program: 'Master of Materials Engineering',
+    gradesMetric: 'CGPA 3.82 / 4.0 (BS Materials)',
+    testScoreMetric: 'IELTS 7.5 Overall',
+    visaTimeDays: 18,
+    testimony: 'Studying in Japan with full tuition relief has been a life-defining phase. Rahbar Consultants structured my MEXT embassy-route application flawlessly.',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200',
     visaStatus: 'Approved'
   }
 ];

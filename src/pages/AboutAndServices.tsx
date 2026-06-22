@@ -1,4 +1,6 @@
 import React from 'react';
+// @ts-ignore
+import regeneratedImage from '../assets/images/regenerated_image_1781048778098.jpg';
 import { 
   Award, 
   MapPin, 
@@ -15,7 +17,7 @@ import { SERVICE_PILLARS } from '../data';
 
 export default function AboutAndServices() {
   return (
-    <div className="min-h-screen bg-white text-slate-700 pt-28 pb-20">
+    <div className="min-h-screen bg-white text-slate-700 pt-6 pb-20">
       
       {/* Editorial Branding banner */}
       <section className="relative py-12 md:py-16 overflow-hidden border-b border-slate-150">
@@ -44,7 +46,7 @@ export default function AboutAndServices() {
           </h2>
           
           <p className="text-sm text-slate-500 font-medium leading-relaxed">
-            Founded with a commitment to integrity and student success, Rahbar Consultants has grown into a leading international education consultancy based in Lahore. We act as official, accredited processing pathways to respected higher learning systems in the United Kingdom, Australia, Canada, Ireland, Malaysia, UAE, and Europe.
+            Founded with a commitment to integrity and student success, Rahbar Consultants has grown into a leading international education consultancy based in Lahore. We act as official, accredited processing pathways to respected higher learning systems in the United Kingdom, Australia, Canada, Ireland, Malaysia, UAE, Europe, South Korea, and Japan.
           </p>
 
           <p className="text-sm text-slate-500 font-medium leading-relaxed">
@@ -71,7 +73,7 @@ export default function AboutAndServices() {
           
           <div className="relative rounded-[30px] border border-slate-200 overflow-hidden shadow-xl bg-slate-100 aspect-video lg:aspect-square">
             <img 
-              src="https://images.unsplash.com/photo-1552581230-c01bc0d48403?auto=format&fit=crop&q=80&w=500" 
+              src={regeneratedImage} 
               alt="Experienced processing advisors hosting a physical university seminar training" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

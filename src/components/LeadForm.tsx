@@ -74,12 +74,43 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
 
     setIsSubmitting(true);
     
-    // Simulate API registration lag
-    setTimeout(() => {
+    fetch("https://formspree.io/f/mnjyzavy", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        "Full Name": formData.fullName,
+        "Telephone Number": formData.phone,
+        "Email Address": formData.email,
+        "Qualification Level": formData.qualification,
+        "Preferred Destination": formData.destination,
+        "Additional Message": formData.message || "No comments"
+      })
+    })
+    .then((response) => {
+      if (response.ok) {
+        setIsSuccess(true);
+        if (onSuccess) onSuccess();
+      } else {
+        response.json().then(data => {
+          if (data && data.errors) {
+            setErrorMsg(data.errors.map((error: { message: string }) => error.message).join(", "));
+          } else {
+            setErrorMsg("Something went wrong submiting to the portal. Please try again.");
+          }
+        }).catch(() => {
+          setErrorMsg("Failed to process server response.");
+        });
+      }
+    })
+    .catch(() => {
+      setErrorMsg("A network connection error occurred. Please check your internet connection.");
+    })
+    .finally(() => {
       setIsSubmitting(false);
-      setIsSuccess(true);
-      if (onSuccess) onSuccess();
-    }, 1200);
+    });
   };
 
   if (isSuccess) {

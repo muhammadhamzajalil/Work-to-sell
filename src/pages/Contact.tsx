@@ -14,7 +14,7 @@ import LeadForm from '../components/LeadForm';
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-white text-slate-700 pt-28 pb-20">
+    <div className="min-h-screen bg-white text-slate-700 pt-6 pb-20">
       
       {/* Structural Title Intro Section */}
       <section className="relative py-12 md:py-16 overflow-hidden border-b border-slate-150">

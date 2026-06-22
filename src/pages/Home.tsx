@@ -32,6 +32,16 @@ import {
 import { DESTINATIONS, PROCESS_STEPS, SERVICE_PILLARS, SUCCESS_STORIES } from '../data';
 import LeadForm from '../components/LeadForm';
 import UniversityLogoMarquee from '../components/UniversityLogoMarquee';
+// @ts-ignore
+import regeneratedImage from '../assets/images/regenerated_image_1781047747375.jpg';
+// @ts-ignore
+import regeneratedImage1 from '../assets/images/regenerated_image_1781048371471.jpg';
+// @ts-ignore
+import regeneratedImage2 from '../assets/images/regenerated_image_1781048372939.jpg';
+// @ts-ignore
+import regeneratedImage5 from '../assets/images/regenerated_image_1781048374424.jpg';
+// @ts-ignore
+import regeneratedImage6 from '../assets/images/regenerated_image_1781049819636.jpg';
 
 // Dynamic Insights & Articles feed
 const INSIGHTS_POSTS = [
@@ -43,7 +53,7 @@ const INSIGHTS_POSTS = [
     readTime: '6 mins read',
     date: 'June 3, 2026',
     author: 'Registrar Team',
-    imgUrl: 'https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&q=80&w=400',
+    imgUrl: regeneratedImage1,
     slug: 'lahore-to-london-cas-vetting'
   },
   {
@@ -54,7 +64,7 @@ const INSIGHTS_POSTS = [
     readTime: '5 mins read',
     date: 'May 28, 2026',
     author: 'Mohamed Rahbar',
-    imgUrl: 'https://images.unsplash.com/photo-1523482596113-f90aa40cf6d4?auto=format&fit=crop&q=80&w=400',
+    imgUrl: regeneratedImage2,
     slug: 'australian-genuine-student-gs'
   },
   {
@@ -87,7 +97,7 @@ const INSIGHTS_POSTS = [
     readTime: '5 mins read',
     date: 'April 11, 2026',
     author: 'Admissions Desk',
-    imgUrl: 'https://images.unsplash.com/photo-1549474843-edde3bf0aba7?auto=format&fit=crop&q=80&w=400',
+    imgUrl: regeneratedImage5,
     slug: 'ireland-stamp-1g-path'
   },
   {
@@ -236,7 +246,7 @@ export default function Home({ onNavigate }: HomeProps) {
     { name: 'University of Debrecen', logotext: 'Debrecen' }
   ];
 
-  // 15 top premium partner universities across our 9 target countries
+  // 23 top premium partner universities across our 11 target countries
   const SHOWCASE_UNIVERSITIES = [
     {
       name: 'University of Hertfordshire',
@@ -363,6 +373,78 @@ export default function Home({ onNavigate }: HomeProps) {
       programs: ['M.Sc Cloud Computing', 'M.Sc Data Analytics', 'BA Finance'],
       isVerified: true,
       logoText: 'NCI'
+    },
+    {
+      name: 'Seoul National University',
+      country: 'South Korea',
+      flag: '🇰🇷',
+      qsRank: '#41 Global',
+      programs: ['B.Sc Computer Science', 'MBA Global Business', 'M.Sc Biotechnology'],
+      isVerified: true,
+      logoText: 'SNU'
+    },
+    {
+      name: 'KAIST',
+      country: 'South Korea',
+      flag: '🇰🇷',
+      qsRank: '#53 Global',
+      programs: ['B.Sc Robotics', 'M.Sc Artificial Intelligence', 'M.Eng Engineering'],
+      isVerified: true,
+      logoText: 'KAIST'
+    },
+    {
+      name: 'Yonsei University',
+      country: 'South Korea',
+      flag: '🇰🇷',
+      qsRank: '#56 Global',
+      programs: ['Bachelor of Business', 'Undergraduate Global Studies', 'M.Sc Computer Tech'],
+      isVerified: true,
+      logoText: 'Yonsei'
+    },
+    {
+      name: 'Korea University',
+      country: 'South Korea',
+      flag: '🇰🇷',
+      qsRank: '#67 Global',
+      programs: ['BA Business Management', 'M.Sc Cybersecurity', 'LLM Law'],
+      isVerified: true,
+      logoText: 'KU'
+    },
+    {
+      name: 'The University of Tokyo',
+      country: 'Japan',
+      flag: '🇯🇵',
+      qsRank: '#28 Global',
+      programs: ['B.Sc Physics', 'Master of Engineering', 'MBA Tech Management'],
+      isVerified: true,
+      logoText: 'UTokyo'
+    },
+    {
+      name: 'Kyoto University',
+      country: 'Japan',
+      flag: '🇯🇵',
+      qsRank: '#46 Global',
+      programs: ['B.Sc Chemistry', 'M.Sc Environmental Sciences', 'PhD Physics'],
+      isVerified: true,
+      logoText: 'KyotoU'
+    },
+    {
+      name: 'Osaka University',
+      country: 'Japan',
+      flag: '🇯🇵',
+      qsRank: '#80 Global',
+      programs: ['B.Sc Biotechnology', 'M.Sc Software Systems', 'MBA Strategic Fin'],
+      isVerified: true,
+      logoText: 'OsakaU'
+    },
+    {
+      name: 'Waseda University',
+      country: 'Japan',
+      flag: '🇯🇵',
+      qsRank: '#181 Global',
+      programs: ['BA International Commerce', 'B.Sc Computer Networks', 'M.A Asia Pacific Studies'],
+      isVerified: true,
+      logoText: 'Waseda'
     }
   ];
 
@@ -417,6 +499,16 @@ export default function Home({ onNavigate }: HomeProps) {
         range = 'Up to 50% off full cycle tuition';
         details = 'APU and Taylor’s University provide direct talent grants for computing, cybersecurity, and engineering high-tier achievers.';
         suitability = 'APU Excellence Grant';
+      } else if (evalCountry === 'South Korea') {
+        eligibility = '100% Fully-Funded Global Korea Scholarship (GKS)';
+        range = 'Full Tuition + Monthly Allowance (₩1,000,000) + Airfare';
+        details = 'Outstanding profile! You are an ideal candidate for the prestigious GKS government-sponsored scholarship. Direct pathways to elite Korean universities are available.';
+        suitability = 'National GKS Scholar';
+      } else if (evalCountry === 'Japan') {
+        eligibility = '100% Fully-Funded MEXT Government Scholarship';
+        range = 'Zero Tuition Fees + Monthly Stipend (¥143,000) + Internals';
+        details = 'Excellent academic standing. You are highly eligible to compete for the Japanese Government Embassy MEXT Scholarship pathway. Unlocks elite public universities.';
+        suitability = 'Elite MEXT Scholar';
       } else {
         eligibility = '30% to 50% Excellence Waiver';
         range = 'Significant fee reductions + local housing subsidy options';
@@ -471,7 +563,7 @@ export default function Home({ onNavigate }: HomeProps) {
     <div className="text-slate-605 bg-white min-h-screen">
       
       {/* SECTION A: PREMIUM HERO FOLD */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <section className="relative pt-8 pb-20 md:pt-12 md:pb-28 overflow-hidden">
         {/* Soft Ambient Guideline Halos */}
         <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-[#3157E6]/5 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-1/3 -right-32 w-[400px] h-[400px] bg-[#4E72FA]/5 rounded-full blur-[100px] pointer-events-none" />
@@ -529,19 +621,19 @@ export default function Home({ onNavigate }: HomeProps) {
 
             {/* Horizontal Statistics Row */}
             <div className="bg-white border border-slate-200/80 rounded-2xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] mt-4">
-              <div className="border-r border-slate-100 last:border-0 pr-2">
+              <div className="border-r border-slate-100 pr-2">
                 <span className="block text-2xl lg:text-3xl font-black text-slate-900">5,000+</span>
                 <span className="text-[10px] text-slate-400 uppercase font-black tracking-widest mt-1 block">Students Guided</span>
               </div>
-              <div className="border-r border-slate-100 last:border-0 pr-2">
+              <div className="md:border-r md:border-slate-100 pr-2">
                 <span className="block text-2xl lg:text-3xl font-black text-[#3157E6]">98%</span>
                 <span className="text-[10px] text-slate-400 uppercase font-black tracking-widest mt-1 block">Visa Success</span>
               </div>
-              <div className="border-r border-slate-100 last:border-0 pr-2">
+              <div className="border-r border-slate-100 pr-2">
                 <span className="block text-2xl lg:text-3xl font-black text-slate-900">100+</span>
                 <span className="text-[10px] text-slate-400 uppercase font-black tracking-widest mt-1 block">University Partners</span>
               </div>
-              <div className="last:border-0 pr-2">
+              <div className="pr-2">
                 <span className="block text-2xl lg:text-3xl font-black text-amber-500">10+ Yrs</span>
                 <span className="text-[10px] text-slate-400 uppercase font-black tracking-widest mt-1 block">Experience</span>
               </div>
@@ -557,7 +649,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Primary Portrait Shape with curves */}
             <div className="relative w-full max-w-[480px] h-[400px] md:h-[480px] rounded-[40px] border border-slate-200 overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.08)] z-10 bg-slate-100">
               <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600"
+                src={regeneratedImage6}
                 alt="Confident International Students on University Campus laughing together"
                 className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700"
                 referrerPolicy="no-referrer"
@@ -569,7 +661,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Asynchronous Floating Glass Cards */}
             {/* Card 1: Australia (Top Right) */}
             <div 
-              className="absolute -top-4 -right-2 md:right-4 z-20 bg-white/95 border border-slate-150 py-3 px-4 rounded-2xl shadow-md hover:scale-105 transition-transform flex items-center gap-3 select-none"
+              className="absolute -top-4 right-2 md:right-4 z-20 bg-white/95 border border-slate-150 py-3 px-4 rounded-2xl shadow-md hover:scale-105 transition-transform flex items-center gap-3 select-none"
               id="hero-float-card-1"
             >
               <span className="text-2xl">🇦🇺</span>
@@ -581,7 +673,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
             {/* Card 2: Visa success badge (Middle Right) */}
             <div 
-              className="absolute top-1/2 -right-6 lg:-right-10 z-20 bg-white/95 border border-slate-150 py-3 px-4 rounded-2xl shadow-md hover:scale-105 transition-transform flex items-center gap-3 select-none"
+              className="absolute top-1/2 right-2 lg:-right-10 z-20 bg-white/95 border border-slate-150 py-3 px-4 rounded-2xl shadow-md hover:scale-105 transition-transform flex items-center gap-3 select-none"
               id="hero-float-card-2"
             >
               <div className="w-8 h-8 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center">
@@ -595,7 +687,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
             {/* Card 3: UK (Bottom Left) */}
             <div 
-              className="absolute bottom-4 -left-4 md:left-4 z-20 bg-white/95 border border-slate-150 py-3 px-4 rounded-2xl shadow-md hover:scale-105 transition-transform flex items-center gap-3 select-none"
+              className="absolute bottom-4 left-2 md:left-4 z-20 bg-white/95 border border-slate-150 py-3 px-4 rounded-2xl shadow-md hover:scale-105 transition-transform flex items-center gap-3 select-none"
               id="hero-float-card-3"
             >
               <span className="text-2xl">🇬🇧</span>
@@ -622,8 +714,8 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      {/* SECTION C: 9 STUDY DESTINATIONS GRID */}
-      <section className="py-24 relative" id="destinations-grid-section">
+      {/* SECTION C: 11 STUDY DESTINATIONS GRID */}
+      <section className="py-10 md:py-24 relative" id="destinations-grid-section">
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -631,7 +723,7 @@ export default function Home({ onNavigate }: HomeProps) {
               Explore Destinations
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
-              A Global Matrix of 9 Elite Academic Vectors
+              A Global Matrix of 11 Elite Academic Vectors
             </h2>
             <p className="text-sm md:text-base text-slate-500 font-medium">
               Select your target nation to inspect custom tuition schedules, cost of living indexes, post-study work authorization visa parameters, and active scholarship slots.
@@ -702,7 +794,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* NEW SECTION 1: WHY CHOOSE RAHBAR CONSULTANTS */}
-      <section className="py-24 bg-white relative overflow-hidden border-t border-slate-100" id="why-choose-rahbar-consultants">
+      <section className="py-10 md:py-24 bg-white relative overflow-hidden border-t border-slate-100" id="why-choose-rahbar-consultants">
         <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-[#3157E6]/3 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -711,7 +803,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="lg:col-span-6 relative flex justify-center">
               <div className="relative w-full max-w-[480px] h-[400px] md:h-[460px] rounded-[42px] border border-slate-200 overflow-hidden shadow-[0_12px_45px_rgba(0,0,0,0.06)] bg-slate-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800"
+                  src={regeneratedImage}
                   alt="Confident student looking to a bright international academic future"
                   className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
@@ -721,7 +813,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
               {/* Stat card overlay */}
               <div 
-                className="absolute -bottom-6 -right-2 md:right-8 z-20 bg-white/95 border border-slate-200 p-5 rounded-3xl shadow-[0_15px_35px_rgba(0,0,0,0.08)] hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center text-center select-none w-44"
+                className="absolute bottom-2 right-2 md:-bottom-6 md:right-8 z-20 bg-white/95 border border-slate-200 p-5 rounded-3xl shadow-[0_15px_35px_rgba(0,0,0,0.08)] hover:scale-105 transition-transform duration-300 flex flex-col items-center justify-center text-center select-none w-44 font-display"
                 id="stat-overlay-premium"
               >
                 <span className="block text-4xl font-extrabold text-[#3157E6] tracking-tight">98%</span>
@@ -790,7 +882,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
 
       {/* NEW SECTION 2: WORLD-CLASS CAMPUSES AT YOUR REACH */}
-      <section className="py-24 bg-slate-50 border-y border-slate-150 relative" id="featured-campuses">
+      <section className="py-10 md:py-24 bg-slate-50 border-y border-slate-150 relative" id="featured-campuses">
         <div className="absolute top-1/2 -right-32 w-80 h-80 bg-[#3157E6]/3 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
@@ -824,7 +916,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
               {/* Country selector filters pills */}
               <div className="col-span-1 md:col-span-7 flex flex-wrap items-center gap-2 overflow-x-auto pb-1 scrollbar-thin">
-                {['All', 'United Kingdom', 'Australia', 'Canada', 'Malaysia', 'United Arab Emirates', 'Europe', 'Romania', 'Hungary', 'Ireland'].map((country) => (
+                {['All', 'United Kingdom', 'Australia', 'Canada', 'Malaysia', 'United Arab Emirates', 'Europe', 'Romania', 'Hungary', 'Ireland', 'South Korea', 'Japan'].map((country) => (
                   <button
                     key={country}
                     onClick={() => setSelectedCountry(country)}
@@ -928,7 +1020,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
 
       {/* NEW SECTION 3: SCHOLARSHIP ELIGIBILITY SECTION & EVALUATOR TOOL */}
-      <section className="py-24 bg-white relative overflow-hidden" id="scholarships-evaluator">
+      <section className="py-10 md:py-24 bg-white relative overflow-hidden" id="scholarships-evaluator">
         <div className="absolute top-1/3 -left-32 w-96 h-96 bg-[#3157E6]/4 rounded-full blur-[110px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 z-10 relative animate-fade-in">
           
@@ -990,6 +1082,8 @@ export default function Home({ onNavigate }: HomeProps) {
                   <option value="Romania">🇷🇴 Romania</option>
                   <option value="Hungary">🇭🇺 Hungary</option>
                   <option value="Ireland">🇮🇪 Ireland</option>
+                  <option value="South Korea">🇰🇷 South Korea</option>
+                  <option value="Japan">🇯🇵 Japan</option>
                 </select>
               </div>
 
@@ -1192,7 +1286,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
 
       {/* SECTION D: WHY CHOOSE RAHBAR SYSTEM */}
-      <section className="py-24 bg-slate-50 border-y border-slate-200 relative" id="why-choose-us-section">
+      <section className="py-10 md:py-24 bg-slate-50 border-y border-slate-200 relative" id="why-choose-us-section">
         {/* Glow decorative spot */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#3157E6]/3 rounded-full blur-[120px] pointer-events-none" />
 
@@ -1238,7 +1332,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* SECTION E: PROCESS TIMELINE MATRIX */}
-      <section className="py-24 relative" id="process-timeline-section">
+      <section className="py-10 md:py-24 relative" id="process-timeline-section">
         <div className="max-w-7xl mx-auto px-4">
           
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
@@ -1287,7 +1381,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* SECTION E_SUB_1: SUCCESS STORIES / ALUMNI TRUST DECK */}
-      <section className="py-24 bg-slate-50 border-t border-slate-200 relative" id="success-stories-section">
+      <section className="py-10 md:py-24 bg-slate-50 border-t border-slate-200 relative" id="success-stories-section">
         <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] bg-[#3157E6]/5 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
@@ -1437,7 +1531,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* SECTION E_SUB_2: STUDENT INSIGHTS & VISA COMPLIANCE PORTAL */}
-      <section className="py-24 bg-white border-t border-slate-200 relative" id="insights-compliance-portal">
+      <section className="py-10 md:py-24 bg-white border-t border-slate-200 relative" id="insights-compliance-portal">
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -1546,7 +1640,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* SECTION E_SUB_3: FREQUENTLY ASKED QUESTIONS (FAQ) */}
-      <section className="py-24 bg-slate-50 border-t border-slate-200 relative" id="faq-accordions-portal">
+      <section className="py-10 md:py-24 bg-slate-50 border-t border-slate-200 relative" id="faq-accordions-portal">
         <div className="absolute top-1/3 -left-32 w-80 h-80 bg-[#3157E6]/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 z-10 relative">
           

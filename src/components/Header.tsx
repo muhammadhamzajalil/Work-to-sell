@@ -9,7 +9,8 @@ import {
   GraduationCap, 
   ArrowRight,
   Sparkles,
-  Award
+  Award,
+  MessageCircle
 } from 'lucide-react';
 import { DESTINATIONS } from '../data';
 
@@ -45,6 +46,26 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleMobileNavClick = (route: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsMegaMenuOpen(false);
+    if (route === 'blog') {
+      onNavigate('home');
+      setIsMobileMenuOpen(false);
+      setTimeout(() => {
+        document.getElementById('insights-compliance-portal')?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    } else if (route === 'home') {
+      onNavigate('home');
+      setIsMobileMenuOpen(false);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      onNavigate(route);
+      setIsMobileMenuOpen(false);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const navItems = [
     { label: 'Home', route: 'home' },
     { label: 'About Us', route: 'about' },
@@ -54,9 +75,9 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <>
       {/* Top Utility Bar */}
-      <div className="bg-slate-50 border-b border-slate-100 py-2 px-4 text-xs select-none">
+      <div className="hidden lg:block relative bg-slate-50 border-b border-slate-100 py-2 px-4 text-xs select-none z-50">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0 text-slate-600">
           <div className="flex flex-wrap justify-center md:justify-start items-center gap-5">
             <a 
@@ -91,11 +112,11 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
       </div>
 
       {/* Main Navigation Bar */}
-      <div 
-        className={`w-full transition-all duration-300 ${
+      <header 
+        className={`sticky top-0 z-[9999] w-full transition-all duration-300 ${
           isScrolled 
             ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200/80 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.06)]' 
-            : 'bg-white/90 backdrop-blur-md py-5 border-b border-slate-100'
+            : 'bg-white/90 backdrop-blur-md py-3 md:py-5 border-b border-slate-100'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
@@ -107,10 +128,10 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
             id="brand-logo-anchor"
           >
             <div className="flex flex-col items-start leading-none group-hover:scale-[1.03] transition-all duration-200">
-              <span className="text-[28px] font-black tracking-[-0.03em] text-[#3157E6] leading-[0.8] lowercase font-display">
+              <span className="text-[28px] font-black tracking-[-0.03em] text-[#385deb] leading-[0.8] lowercase font-display">
                 rahbar
               </span>
-              <span className="text-[11px] font-bold tracking-[0.05em] text-[#3157E6]/95 leading-none lowercase pl-5 mt-1 font-display">
+              <span className="text-[11px] font-bold tracking-[0.05em] text-[#385deb] leading-none lowercase pl-5 mt-1 font-display">
                 consultants
               </span>
             </div>
@@ -258,28 +279,68 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-      </div>
+      </header>
 
       {/* Mobile Drawer (Overlay system on White theme base) */}
       <div 
-        className={`fixed inset-0 top-[108px] md:top-[80px] z-40 bg-white/98 backdrop-blur-xl transition-all duration-300 border-t border-slate-100 lg:hidden flex flex-col justify-between overflow-y-auto ${
+        className={`fixed inset-x-0 bottom-0 z-40 bg-white/98 backdrop-blur-xl transition-all duration-300 border-t border-slate-100 lg:hidden flex flex-col justify-between overflow-y-auto top-[68px] ${
           isMobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'
         }`}
       >
         <div className="p-6 space-y-6">
           <nav className="flex flex-col space-y-4">
-            {navItems.map((item) => (
-              <a 
-                key={item.route}
-                href={`#/${item.route}`}
-                onClick={(e) => handleLinkClick(item.route, e)}
-                className={`py-2 text-lg font-bold border-b border-slate-100 pb-2 transition-colors ${
-                  currentRoute === item.route ? 'text-[#3157E6]' : 'text-slate-800 hover:text-slate-900'
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
+            {/* Home Link */}
+            <a 
+              href="#/"
+              onClick={(e) => handleMobileNavClick('home', e)}
+              className={`py-2 text-lg font-bold border-b border-slate-100 pb-2 transition-colors ${
+                currentRoute === 'home' || currentRoute === '' ? 'text-[#3157E6]' : 'text-slate-800 hover:text-slate-900'
+              }`}
+            >
+              Home
+            </a>
+
+            {/* Scholarships Link */}
+            <a 
+              href="#/scholarships"
+              onClick={(e) => handleMobileNavClick('scholarships', e)}
+              className={`py-2 text-lg font-bold border-b border-slate-100 pb-2 transition-colors ${
+                currentRoute === 'scholarships' ? 'text-[#3157E6]' : 'text-slate-800 hover:text-slate-900'
+              }`}
+            >
+              Scholarships
+            </a>
+
+            {/* Success Stories Link */}
+            <a 
+              href="#/success-stories"
+              onClick={(e) => handleMobileNavClick('success-stories', e)}
+              className={`py-2 text-lg font-bold border-b border-slate-100 pb-2 transition-colors ${
+                currentRoute === 'success-stories' ? 'text-[#3157E6]' : 'text-slate-800 hover:text-slate-900'
+              }`}
+            >
+              Success Stories
+            </a>
+
+            {/* Blog Link */}
+            <a 
+              href="#/blog"
+              onClick={(e) => handleMobileNavClick('blog', e)}
+              className={`py-2 text-lg font-bold border-b border-slate-100 pb-2 transition-colors text-slate-800 hover:text-slate-900`}
+            >
+              Blog / Insights
+            </a>
+
+            {/* Contact Link */}
+            <a 
+              href="#/contact"
+              onClick={(e) => handleMobileNavClick('contact', e)}
+              className={`py-2 text-lg font-bold border-b border-slate-100 pb-2 transition-colors ${
+                currentRoute === 'contact' ? 'text-[#3157E6]' : 'text-slate-800 hover:text-slate-900'
+              }`}
+            >
+              Contact
+            </a>
 
             {/* Destinations sub-list in mobile view */}
             <div className="pt-2">
@@ -291,8 +352,8 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
                   <a
                     key={dest.id}
                     href={`#/destinations/${dest.slug}`}
-                    onClick={(e) => handleLinkClick(`destination_${dest.slug}`, e)}
-                    className="flex items-center gap-2 p-2 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-100 transition-colors text-sm text-slate-700"
+                    onClick={(e) => handleMobileNavClick(`destination_${dest.slug}`, e)}
+                    className="flex items-center gap-2 p-2 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-100 transition-colors text-sm text-slate-700 font-display"
                     id={`mobile-dest-link-${dest.id}`}
                   >
                     <span>{dest.flag}</span>
@@ -307,21 +368,29 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
         {/* Bottom actions in Drawer */}
         <div className="p-6 border-t border-slate-150 bg-slate-50 flex flex-col gap-3">
           <a
-            href="tel:+923254008823"
-            className="flex items-center justify-center gap-2 py-3 rounded-xl bg-white border border-slate-200 text-slate-850 font-bold text-sm text-slate-705 shadow-sm"
+            href="#/contact"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsMobileMenuOpen(false);
+              onNavigate('contact');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="bg-gradient-to-r from-[#3157E6] to-[#4E72FA] text-white font-bold text-sm py-3.5 rounded-xl text-center shadow-[0_4px_15px_rgba(49,87,230,0.25)] flex items-center justify-center gap-2 min-h-[48px]"
           >
-            <Phone className="w-4 h-4 text-[#3157E6]" />
-            Call: +92 325 400 88 23
+            <span>Book Free Consultation</span>
+            <ArrowRight className="w-4 h-4" />
           </a>
           <a
-            href="#/contact"
-            onClick={(e) => handleLinkClick('contact', e)}
-            className="bg-gradient-to-r from-[#3157E6] to-[#4E72FA] text-white font-bold text-sm py-3.5 rounded-xl text-center shadow-[0_4px_15px_rgba(49,87,230,0.25)]"
+            href="https://wa.me/923254008823"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#25D366] text-white font-bold text-sm py-3.5 rounded-xl text-center shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 min-h-[48px]"
           >
-            Book Free Appointment
+            <MessageCircle className="w-4 h-4" />
+            WhatsApp Chat Support
           </a>
         </div>
       </div>
-    </header>
+    </>
   );
 }

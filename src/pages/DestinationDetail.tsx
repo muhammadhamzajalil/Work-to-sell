@@ -54,7 +54,7 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-700 pt-32 pb-24">
+    <div className="min-h-screen bg-white text-slate-700 pt-6 pb-24">
       {/* Dynamic Cover Banner with ambient shading in White/Grey Theme */}
       <div className="relative w-full h-[320px] md:h-[400px] overflow-hidden border-b border-slate-200 bg-slate-50">
         <div 

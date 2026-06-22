@@ -18,14 +18,14 @@ import { SuccessStory } from '../types';
 export default function SuccessStories() {
   const [activeCountryFilter, setActiveCountryFilter] = useState('All');
 
-  const countriesWithStories = ['All', 'United Kingdom (UK)', 'Australia', 'Hungary', 'Malaysia'];
+  const countriesWithStories = ['All', 'United Kingdom (UK)', 'Australia', 'Hungary', 'Malaysia', 'South Korea', 'Japan'];
 
   const filteredStories = SUCCESS_STORIES.filter(story => {
     return activeCountryFilter === 'All' || story.targetCountry === activeCountryFilter;
   });
 
   return (
-    <div className="min-h-screen bg-white text-slate-700 pt-28 pb-20">
+    <div className="min-h-screen bg-white text-slate-700 pt-6 pb-20">
       
       {/* Structural Header intro panel */}
       <section className="relative py-12 md:py-16 overflow-hidden border-b border-slate-150">

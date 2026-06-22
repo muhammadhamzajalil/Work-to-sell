@@ -103,10 +103,29 @@ export default function Scholarships() {
       ieltsVal,
       targetCountry
     });
+
+    // Send assessment analytical telemetry safely to Formspree
+    fetch("https://formspree.io/f/mnjyzavy", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        "Submission Type": "Live Eligibility Assessment",
+        "Academic Marks %": gradeVal,
+        "IELTS Score": ieltsVal,
+        "Preferred Destination": targetCountry,
+        "Calculated Tier": tier,
+        "Waiver Estimate": waiverEstimate
+      })
+    }).catch((err) => {
+      console.warn("Assessment logging failed to transmit", err);
+    });
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-700 pt-28 pb-20">
+    <div className="min-h-screen bg-white text-slate-700 pt-6 pb-20">
       
       {/* Upper Brand Intro fold */}
       <section className="relative py-12 md:py-16 overflow-hidden border-b border-slate-150">
@@ -201,10 +220,10 @@ export default function Scholarships() {
                   </div>
                   
                   <a
-                    href="#consultation-form-wrapper"
+                    href="#scholarship-eligibility-calculator"
                     onClick={(e) => {
                       e.preventDefault();
-                      document.getElementById('consultation-form-wrapper')?.scrollIntoView({ behavior: 'smooth' });
+                      document.getElementById('scholarship-eligibility-calculator')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                     className="mt-4 md:mt-0 text-[10px] font-black uppercase bg-[#3157E6] text-white py-2.5 px-3 rounded-lg text-center hover:opacity-90 block hover:shadow-md transition-shadow active:scale-95"
                     id={`scholarship-apply-btn-${sch.id}`}
