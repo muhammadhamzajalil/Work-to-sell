@@ -197,6 +197,7 @@ export default function Home({ onNavigate }: HomeProps) {
   const [evalLevel, setEvalLevel] = useState("Postgraduate (Master's/MBA)");
   const [isEvaluating, setIsEvaluating] = useState(false);
   const [evalDone, setEvalDone] = useState(false);
+  const [evalId, setEvalId] = useState<number>(0);
 
   // Alumni Success Video states with high-fidelity simulations
   const [isPlayingVideo, setIsPlayingVideo] = useState(false);
@@ -455,6 +456,7 @@ export default function Home({ onNavigate }: HomeProps) {
     setTimeout(() => {
       setIsEvaluating(false);
       setEvalDone(true);
+      setEvalId(Math.floor(1000 + Math.random() * 9000));
     }, 850);
   };
 
@@ -560,7 +562,7 @@ export default function Home({ onNavigate }: HomeProps) {
   };
 
   return (
-    <div className="text-slate-605 bg-white min-h-screen">
+    <div className="text-slate-605 bg-white min-h-screen overflow-x-hidden w-full max-w-full">
       
       {/* SECTION A: PREMIUM HERO FOLD */}
       <section className="relative pt-8 pb-20 md:pt-12 md:pb-28 overflow-hidden">
@@ -571,7 +573,7 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Column Content Frame (45%) */}
-          <div className="lg:col-span-6 space-y-8 flex flex-col justify-center">
+          <div className="lg:col-span-6 space-y-6 md:space-y-8 flex flex-col justify-center">
             
             {/* Micro-label pill */}
             <div className="inline-flex self-start items-center gap-2 bg-slate-50 border border-slate-200 rounded-full py-1.5 px-4 shadow-sm">
@@ -581,21 +583,24 @@ export default function Home({ onNavigate }: HomeProps) {
               </span>
             </div>
 
-            {/* H1 Main Headline */}
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-black tracking-tight leading-tight md:leading-none text-slate-900">
-              Your Gateway To <br />
-              <span className="relative inline-block mt-1.5 pb-1">
-                <span className="relative z-10 bg-gradient-to-r from-[#3157E6] via-[#4E72FA] to-[#3157E6] bg-clip-text text-transparent">
-                  [Global Education Success]
+            {/* Headline and Paragraph Grouping with tight spacing to eliminate excessive spacing on mobile */}
+            <div className="space-y-4 md:space-y-6 text-left">
+              {/* H1 Main Headline */}
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-black tracking-tight leading-tight md:leading-none text-slate-900">
+                Your Gateway To <br />
+                <span className="relative inline-block mt-1.5 pb-1">
+                  <span className="relative z-10 bg-gradient-to-r from-[#3157E6] via-[#4E72FA] to-[#3157E6] bg-clip-text text-transparent">
+                    [Global Education Success]
+                  </span>
+                  <span className="absolute bottom-1 left-0 w-full h-2.5 bg-[#3157E6]/10 rounded pointer-events-none" />
                 </span>
-                <span className="absolute bottom-1 left-0 w-full h-2.5 bg-[#3157E6]/10 rounded pointer-events-none" />
-              </span>
-            </h1>
+              </h1>
 
-            {/* Subheadline explanatory copy */}
-            <p className="text-base md:text-lg text-slate-500 leading-relaxed max-w-[600px] font-medium">
-              Assisting high-caliber candidates in Lahore to secure top-tier university admits, premium scholarships, and simplified study visa approvals. Connect with our certified advisors today.
-            </p>
+              {/* Subheadline explanatory copy */}
+              <p className="text-base md:text-lg text-slate-500 leading-relaxed max-w-[600px] font-medium">
+                Assisting high-caliber candidates in Lahore to secure top-tier university admits, premium scholarships, and simplified study visa approvals. Connect with our certified advisors today.
+              </p>
+            </div>
 
             {/* Action Buttons Row */}
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
@@ -641,8 +646,8 @@ export default function Home({ onNavigate }: HomeProps) {
 
           </div>
 
-          {/* Right Column Aesthetic Focus (55%) */}
-          <div className="lg:col-span-6 flex justify-center items-center relative lg:h-[600px] mt-8 lg:mt-0">
+          {/* Right Column Aesthetic Focus (55%) with mobile overflow-hidden and desktop overflow-visible to clip floating elements perfectly */}
+          <div className="lg:col-span-6 flex justify-center items-center relative lg:h-[600px] mt-8 lg:mt-0 overflow-hidden lg:overflow-visible w-full">
             {/* Soft backdrop radial pulse glow */}
             <div className="absolute inset-0 bg-[#3157E6]/5 rounded-full blur-[100px] animate-pulse" />
             
@@ -882,7 +887,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
 
       {/* NEW SECTION 2: WORLD-CLASS CAMPUSES AT YOUR REACH */}
-      <section className="py-10 md:py-24 bg-slate-50 border-y border-slate-150 relative" id="featured-campuses">
+      <section className="py-10 md:py-24 bg-slate-50 border-y border-slate-150 relative overflow-hidden" id="featured-campuses">
         <div className="absolute top-1/2 -right-32 w-80 h-80 bg-[#3157E6]/3 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
@@ -1265,7 +1270,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
                   {/* Actions to proceed */}
                   <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 mt-4">
-                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">PRE-CLASSIFICATION ID: RC-{Math.floor(1000 + Math.random() * 9000)}</p>
+                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">PRE-CLASSIFICATION ID: RC-{evalId || '8324'}</p>
                     <button
                       onClick={() => handleInquireUniversity(evalCountry, `Scholarship Inquiry (${getEvaluationResult().eligibility}) Grade: ${evalScoreVal} ${evalScoreType.toUpperCase()}`)}
                       className="w-full sm:w-auto bg-[#3157E6] hover:bg-[#3157E6] text-white text-[11px] font-black tracking-widest uppercase px-6 py-3 rounded-xl transition-all cursor-pointer shadow-sm shadow-[#3157E6]/10"
@@ -1381,7 +1386,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* SECTION E_SUB_1: SUCCESS STORIES / ALUMNI TRUST DECK */}
-      <section className="py-10 md:py-24 bg-slate-50 border-t border-slate-200 relative" id="success-stories-section">
+      <section className="py-10 md:py-24 bg-slate-50 border-t border-slate-200 relative overflow-hidden" id="success-stories-section">
         <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] bg-[#3157E6]/5 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 z-10 relative">
           
@@ -1640,7 +1645,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* SECTION E_SUB_3: FREQUENTLY ASKED QUESTIONS (FAQ) */}
-      <section className="py-10 md:py-24 bg-slate-50 border-t border-slate-200 relative" id="faq-accordions-portal">
+      <section className="py-10 md:py-24 bg-slate-50 border-t border-slate-200 relative overflow-hidden" id="faq-accordions-portal">
         <div className="absolute top-1/3 -left-32 w-80 h-80 bg-[#3157E6]/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 z-10 relative">
           

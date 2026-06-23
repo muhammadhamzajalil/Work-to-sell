@@ -128,7 +128,7 @@ export default function Footer({ onNavigate, currentRoute }: FooterProps) {
             <div className="flex gap-2.5 items-start">
               <MapPin className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
               <p className="leading-relaxed text-slate-500 font-medium text-xs">
-                Flat No 110-111, First Floor, Asad Tower, International Market, Model Town, M Block, Lahore, Pakistan 54000.
+                Flat No 110-111, First Floor, Asad Tower, International Market, Model Town, M Block, Lahore, Lahore, Pakistan 54000.
               </p>
             </div>
 

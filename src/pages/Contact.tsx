@@ -92,7 +92,7 @@ export default function Contact() {
               <div>
                 <span className="font-black block text-slate-900 mb-1 uppercase text-[10px] tracking-wider text-slate-450">Physical Address</span>
                 <p className="leading-relaxed text-slate-505 text-slate-500">
-                  Flat No 110-111, First Floor, Asad Tower, International Market, Model Town, M Block, Lahore, Pakistan 54000.
+                  Flat No 110-111, First Floor, Asad Tower, International Market, Model Town, M Block, Lahore, Lahore, Pakistan 54000.
                 </p>
               </div>
             </div>

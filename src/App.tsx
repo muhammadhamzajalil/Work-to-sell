@@ -1,13 +1,13 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-const Home = lazy(() => import('./pages/Home'));
-const DestinationDetail = lazy(() => import('./pages/DestinationDetail'));
-const Scholarships = lazy(() => import('./pages/Scholarships'));
-const SuccessStories = lazy(() => import('./pages/SuccessStories'));
-const AboutAndServices = lazy(() => import('./pages/AboutAndServices'));
-const Contact = lazy(() => import('./pages/Contact'));
+import Home from './pages/Home';
+import DestinationDetail from './pages/DestinationDetail';
+import Scholarships from './pages/Scholarships';
+import SuccessStories from './pages/SuccessStories';
+import AboutAndServices from './pages/AboutAndServices';
+import Contact from './pages/Contact';
 
 const RouteLoader = () => (
   <div className="flex flex-col items-center justify-center min-h-[60vh] py-12" id="route-skeleton-loader">
@@ -91,9 +91,7 @@ export default function App() {
 
       {/* Main page dynamic canvas container */}
       <main className="flex-1">
-        <Suspense fallback={<RouteLoader />}>
-          {renderActiveRoute()}
-        </Suspense>
+        {renderActiveRoute()}
       </main>
 
       {/* Corporate footer showing links and mobile-dock utility */}
