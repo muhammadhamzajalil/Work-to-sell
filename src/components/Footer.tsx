@@ -35,10 +35,10 @@ export default function Footer({ onNavigate, currentRoute }: FooterProps) {
         <div className="space-y-6">
           <div className="flex items-center gap-1.5 select-none">
             <div className="flex flex-col items-start leading-none">
-              <span className="text-[26px] font-black tracking-[-0.03em] text-[#385deb] leading-[0.8] lowercase font-display">
+              <span className="text-[26px] font-black tracking-[-0.03em] text-[#4A6FF8] leading-[0.8] lowercase font-display">
                 rahbar
               </span>
-              <span className="text-[11px] font-bold tracking-[0.05em] text-[#385deb] leading-none lowercase pl-5 mt-1 font-display">
+              <span className="text-[11px] font-bold tracking-[0.05em] text-[#4A6FF8] leading-none lowercase pl-5 mt-1 font-display">
                 consultants
               </span>
             </div>

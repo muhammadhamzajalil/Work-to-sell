@@ -26,6 +26,16 @@ export default function LeadForm({ initialDestination = '', onSuccess }: LeadFor
     message: ''
   });
 
+  // Sync destination form field when changing destination detail pages
+  React.useEffect(() => {
+    if (initialDestination) {
+      setFormData(prev => ({
+        ...prev,
+        destination: initialDestination
+      }));
+    }
+  }, [initialDestination]);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');

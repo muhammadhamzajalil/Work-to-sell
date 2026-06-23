@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { SUCCESS_STORIES, DESTINATIONS } from '../data';
 import { SuccessStory } from '../types';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function SuccessStories() {
   const [activeCountryFilter, setActiveCountryFilter] = useState('All');
@@ -90,11 +91,12 @@ export default function SuccessStories() {
                 {/* Profile header with student avatar */}
                 <div className="flex items-center gap-4 border-b border-slate-100 pb-4 mb-6">
                   <div className="w-12 h-12 rounded-full border border-slate-150 overflow-hidden shrink-0 bg-slate-100 shadow-inner">
-                    <img 
-                      src={story.avatarUrl} 
+                    <OptimizedImage 
+                      url={story.avatarUrl} 
+                      width={96}
                       alt={`Portrait of matching candidate ${story.studentName}`} 
                       className="w-full h-full object-cover"
-                      referrerPolicy="no-referrer"
+                      loading="lazy"
                     />
                   </div>
                   <div>

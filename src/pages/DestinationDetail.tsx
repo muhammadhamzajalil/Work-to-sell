@@ -16,6 +16,7 @@ import {
 import { DESTINATIONS } from '../data';
 import { Destination } from '../types';
 import LeadForm from '../components/LeadForm';
+import { getOptimizedImageUrl } from '../utils';
 
 interface DestinationDetailProps {
   countrySlug: string;
@@ -59,7 +60,7 @@ export default function DestinationDetail({ countrySlug, onNavigate }: Destinati
       <div className="relative w-full h-[320px] md:h-[400px] overflow-hidden border-b border-slate-200 bg-slate-50">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-25 scale-105"
-          style={{ backgroundImage: `url(${destination.imageTheme})` }}
+          style={{ backgroundImage: `url(${getOptimizedImageUrl(destination.imageTheme, 1200)})` }}
         />
         {/* Overlay gradient - transitioning smoothly to pure white page base */}
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent" />

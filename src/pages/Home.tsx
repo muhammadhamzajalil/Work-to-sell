@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
 import { 
   ArrowRight, 
   Sparkles, 
@@ -32,6 +31,11 @@ import {
 import { DESTINATIONS, PROCESS_STEPS, SERVICE_PILLARS, SUCCESS_STORIES } from '../data';
 import LeadForm from '../components/LeadForm';
 import UniversityLogoMarquee from '../components/UniversityLogoMarquee';
+import { getOptimizedImageUrl, getBlogFallbackImage } from '../utils';
+import { BLOG_POSTS, BlogPost } from '../blogData';
+import BlogPopup from '../components/BlogPopup';
+import OptimizedImage from '../components/OptimizedImage';
+
 // @ts-ignore
 import regeneratedImage from '../assets/images/regenerated_image_1781047747375.jpg';
 // @ts-ignore
@@ -42,76 +46,6 @@ import regeneratedImage2 from '../assets/images/regenerated_image_1781048372939.
 import regeneratedImage5 from '../assets/images/regenerated_image_1781048374424.jpg';
 // @ts-ignore
 import regeneratedImage6 from '../assets/images/regenerated_image_1781049819636.jpg';
-
-// Dynamic Insights & Articles feed
-const INSIGHTS_POSTS = [
-  {
-    id: 1,
-    title: 'Lahore to London: Complete CAS Vetting & Compliance Audit Checklist',
-    excerpt: 'Detailed review of latest UK Visas and Immigration (UKVI) guidelines, active bank statement constraints, and university pre-CAS credibility interviews.',
-    category: 'Visas',
-    readTime: '6 mins read',
-    date: 'June 3, 2026',
-    author: 'Registrar Team',
-    imgUrl: regeneratedImage1,
-    slug: 'lahore-to-london-cas-vetting'
-  },
-  {
-    id: 2,
-    title: 'Demystifying the Australian Genuine Student (GS) Requirement',
-    excerpt: 'A comprehensive checklist of what GTE-replacement parameters level-1 Australian universities are searching for in your study plan layout.',
-    category: 'Admissions',
-    readTime: '5 mins read',
-    date: 'May 28, 2026',
-    author: 'Mohamed Rahbar',
-    imgUrl: regeneratedImage2,
-    slug: 'australian-genuine-student-gs'
-  },
-  {
-    id: 3,
-    title: 'How to Win the Fully-Funded Stipendium Hungaricum Spot in Hungary',
-    excerpt: 'A blueprint for preparing a high-impact motivational statement and securing absolute state sponsorship in Budapest and Debrecen.',
-    category: 'Scholarships',
-    readTime: '7 mins read',
-    date: 'May 15, 2026',
-    author: 'Scholarship Desk',
-    imgUrl: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80&w=400',
-    slug: 'stipendium-hungaricum-success'
-  },
-  {
-    id: 4,
-    title: 'Part-Time Work Guidelines & Hourly Rates in Schengen Europe',
-    excerpt: 'Navigate of the latest legal frameworks allowing 20 to 30 weekly hours of off-campus employment for non-EU international candidates.',
-    category: 'Student Life',
-    readTime: '4 mins read',
-    date: 'April 20, 2026',
-    author: 'Student Care Desk',
-    imgUrl: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&q=80&w=400',
-    slug: 'part-time-work-schengen'
-  },
-  {
-    id: 5,
-    title: 'Graduate Work routes in Ireland: Stamp 1G post-study visa path analyzed',
-    excerpt: 'How tech graduates are bridging into multinational offices of Google, Meta, and Stripe directly via Dublin-based institutions.',
-    category: 'Admissions',
-    readTime: '5 mins read',
-    date: 'April 11, 2026',
-    author: 'Admissions Desk',
-    imgUrl: regeneratedImage5,
-    slug: 'ireland-stamp-1g-path'
-  },
-  {
-    id: 6,
-    title: 'Secure Savings: Framing High-Velocity Personal Funds for Visas',
-    excerpt: 'Correct structures of bank statements, source of fund proofs, and sponsor layouts required to pass biometric checks without errors.',
-    category: 'Visas',
-    readTime: '8 mins read',
-    date: 'March 24, 2026',
-    author: 'Finance Audit Lead',
-    imgUrl: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=400',
-    slug: 'securing-bank-funds-visa'
-  }
-];
 
 // Rich counseling FAQ base grouped by topics
 const FAQ_ITEMS = [
@@ -228,8 +162,21 @@ export default function Home({ onNavigate }: HomeProps) {
     return () => clearInterval(intervalId);
   }, [isMockPlaying]);
 
+  React.useEffect(() => {
+    // Preload the main hero image to improve largest contentful paint (LCP) score
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = regeneratedImage6;
+    document.head.appendChild(link);
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
   // Student Insights & Featured News Portal State
   const [insightsCategory, setInsightsCategory] = useState('All');
+  const [selectedBlogPost, setSelectedBlogPost] = useState<BlogPost | null>(null);
 
   // FAQ Accordions Categories and State
   const [faqCategory, setFaqCategory] = useState('General');
@@ -653,11 +600,12 @@ export default function Home({ onNavigate }: HomeProps) {
             
             {/* Primary Portrait Shape with curves */}
             <div className="relative w-full max-w-[480px] h-[400px] md:h-[480px] rounded-[40px] border border-slate-200 overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.08)] z-10 bg-slate-100">
-              <img 
-                src={regeneratedImage6}
+              <OptimizedImage 
+                url={regeneratedImage6}
                 alt="Confident International Students on University Campus laughing together"
                 className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700"
-                referrerPolicy="no-referrer"
+                loading="eager"
+                fetchPriority="high"
               />
               {/* Overlay shading */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent" />
@@ -749,7 +697,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 {/* Micro background illustration theme */}
                 <div 
                   className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none bg-cover bg-center" 
-                  style={{ backgroundImage: `url(${dest.imageTheme})` }}
+                  style={{ backgroundImage: `url(${getOptimizedImageUrl(dest.imageTheme, 400)})` }}
                 />
 
                 <div>
@@ -807,11 +755,11 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Left Column: Image wrapper with stat tag */}
             <div className="lg:col-span-6 relative flex justify-center">
               <div className="relative w-full max-w-[480px] h-[400px] md:h-[460px] rounded-[42px] border border-slate-200 overflow-hidden shadow-[0_12px_45px_rgba(0,0,0,0.06)] bg-slate-100">
-                <img 
-                  src={regeneratedImage}
+                <OptimizedImage 
+                  url={regeneratedImage}
                   alt="Confident student looking to a bright international academic future"
                   className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 via-transparent to-transparent pointer-events-none" />
               </div>
@@ -1407,11 +1355,12 @@ export default function Home({ onNavigate }: HomeProps) {
             {/* Left Column: High-Res Interactive Video Testimonial Card */}
             <div className="lg:col-span-5 flex flex-col justify-between">
               <div className="group relative w-full h-[320px] md:h-[420px] rounded-[36px] border border-slate-200 overflow-hidden shadow-lg bg-slate-950 flex flex-col justify-end">
-                <img 
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=800"
+                <OptimizedImage 
+                  url="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=800"
+                  width={600}
                   alt="Zainab Fatima sharing her success diary on campus"
                   className="absolute inset-0 w-full h-full object-cover object-top opacity-85 group-hover:scale-[1.03] transition-transform duration-700 font-medium"
-                  referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent pointer-events-none" />
                 
@@ -1472,11 +1421,12 @@ export default function Home({ onNavigate }: HomeProps) {
                     {/* Header: Student avatar and metadata tags */}
                     <div className="flex justify-between items-start">
                       <div className="flex items-center gap-3">
-                        <img 
-                          src={story.avatarUrl} 
+                        <OptimizedImage 
+                          url={story.avatarUrl} 
+                          width={96}
                           alt={story.studentName} 
                           className="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-sm"
-                          referrerPolicy="no-referrer"
+                          loading="lazy"
                         />
                         <div>
                           <h4 className="text-xs font-black text-slate-900 leading-tight">{story.studentName}</h4>
@@ -1571,7 +1521,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
           {/* Grid Layout of Featured Compliance Articles */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {INSIGHTS_POSTS.filter((post) => insightsCategory === 'All' || post.category === insightsCategory).map((post) => (
+            {BLOG_POSTS.filter((post) => insightsCategory === 'All' || post.category === insightsCategory).map((post) => (
               <article 
                 key={post.id}
                 className="bg-white border border-slate-200 rounded-[28px] overflow-hidden shadow-sm hover:shadow-lg hover:border-slate-300 group flex flex-col justify-between -translate-y-0 hover:-translate-y-1.5 transition-all duration-300 min-h-[460px]"
@@ -1580,11 +1530,13 @@ export default function Home({ onNavigate }: HomeProps) {
                 <div>
                   {/* Aspect Ratio Cover Photo */}
                   <div className="relative h-48 w-full bg-slate-100 overflow-hidden border-b border-slate-150">
-                    <img 
-                      src={post.imgUrl}
+                    <OptimizedImage 
+                      url={post.imgUrl}
+                      width={400}
+                      category={post.category}
                       alt={post.title}
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 font-medium"
-                      referrerPolicy="no-referrer"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent pointer-events-none" />
                     
@@ -1624,7 +1576,8 @@ export default function Home({ onNavigate }: HomeProps) {
                     EDIT: {post.author}
                   </span>
                   <button
-                    onClick={() => handleInquireUniversity('United Kingdom', `Insight callback from portal: ${post.title}`)}
+                    type="button"
+                    onClick={() => setSelectedBlogPost(post)}
                     className="inline-flex items-center gap-1 text-xs text-[#3157E6] hover:text-[#3157E6] font-black uppercase tracking-widest transition-colors cursor-pointer"
                   >
                     <span>Read Guide</span>
@@ -1634,12 +1587,22 @@ export default function Home({ onNavigate }: HomeProps) {
               </article>
             ))}
 
-            {INSIGHTS_POSTS.filter((post) => insightsCategory === 'All' || post.category === insightsCategory).length === 0 && (
+            {BLOG_POSTS.filter((post) => insightsCategory === 'All' || post.category === insightsCategory).length === 0 && (
               <div className="col-span-full py-16 text-center bg-slate-50 border border-slate-200 rounded-3xl">
                 <p className="text-slate-400 text-sm font-semibold">No publications matching this section right now.</p>
               </div>
             )}
           </div>
+
+          {/* Premium blog popup */}
+          {selectedBlogPost && (
+            <BlogPopup 
+              post={selectedBlogPost} 
+              onClose={() => setSelectedBlogPost(null)} 
+              onNavigate={onNavigate}
+              onSelectPost={(post) => setSelectedBlogPost(post)}
+            />
+          )}
 
         </div>
       </section>
@@ -1702,17 +1665,14 @@ export default function Home({ onNavigate }: HomeProps) {
                     </span>
                   </button>
 
-                  {/* Expandable Panel using motion layout */}
-                  <motion.div
-                    initial={false}
-                    animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
-                    transition={{ duration: 0.25, ease: 'easeInOut' }}
-                    className="overflow-hidden"
+                  {/* Expandable Panel */}
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
                   >
                     <div className="px-6 pb-6 text-xs md:text-sm text-slate-501 leading-relaxed font-semibold border-t border-slate-100 pt-4 bg-slate-50/20">
                       {item.answer}
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
               );
             })}
@@ -1752,11 +1712,12 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="relative aspect-video w-full bg-slate-950 flex flex-col justify-end">
               
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" 
+                <OptimizedImage 
+                  url="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" 
+                  width={600}
                   className="w-full h-full object-cover absolute inset-0 opacity-20 pointer-events-none" 
                   alt="High-fidelity background campus footage"
-                  referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 
                 <div className="relative z-10 flex flex-col items-center justify-center space-y-4">

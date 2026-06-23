@@ -8,6 +8,7 @@ import Scholarships from './pages/Scholarships';
 import SuccessStories from './pages/SuccessStories';
 import AboutAndServices from './pages/AboutAndServices';
 import Contact from './pages/Contact';
+import BlogDetail from './pages/BlogDetail';
 
 const RouteLoader = () => (
   <div className="flex flex-col items-center justify-center min-h-[60vh] py-12" id="route-skeleton-loader">
@@ -21,19 +22,58 @@ const RouteLoader = () => (
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState('home');
   const [destinationSlug, setDestinationSlug] = useState('');
+  const [blogSlug, setBlogSlug] = useState('');
 
   // Handle hash change events to support back/forward browser actions and direct entry points
   useEffect(() => {
     const parseHashRoute = () => {
-      const hash = window.location.hash || '#/';
+      let hash = window.location.hash || '#/';
+      hash = hash.trim();
       
       if (hash.startsWith('#/destinations/')) {
-        const slug = hash.replace('#/destinations/', '');
+        let slug = hash.replace('#/destinations/', '');
+        // Remove query parameters or trailing hashes
+        if (slug.includes('?')) {
+          slug = slug.split('?')[0];
+        }
+        if (slug.includes('#')) {
+          slug = slug.split('#')[0];
+        }
+        // Strip trailing slashes
+        while (slug.endsWith('/')) {
+          slug = slug.slice(0, -1);
+        }
         setCurrentRoute(`destination_${slug}`);
         setDestinationSlug(slug);
+      } else if (hash.startsWith('#/blog/')) {
+        let slug = hash.replace('#/blog/', '');
+        // Remove query parameters or trailing hashes
+        if (slug.includes('?')) {
+          slug = slug.split('?')[0];
+        }
+        if (slug.includes('#')) {
+          slug = slug.split('#')[0];
+        }
+        // Strip trailing slashes
+        while (slug.endsWith('/')) {
+          slug = slug.slice(0, -1);
+        }
+        setCurrentRoute(`blog_${slug}`);
+        setBlogSlug(slug);
       } else {
-        const route = hash.replace('#/', '') || 'home';
-        setCurrentRoute(route);
+        let route = hash.replace('#/', '') || 'home';
+        // Remove query parameters or trailing hashes
+        if (route.includes('?')) {
+          route = route.split('?')[0];
+        }
+        if (route.includes('#')) {
+          route = route.split('#')[0];
+        }
+        // Strip trailing slashes
+        while (route.endsWith('/')) {
+          route = route.slice(0, -1);
+        }
+        setCurrentRoute(route || 'home');
       }
     };
 
@@ -51,10 +91,19 @@ export default function App() {
     if (route.startsWith('destination_')) {
       const slug = route.replace('destination_', '');
       window.location.hash = `#/destinations/${slug}`;
+      setCurrentRoute(route);
+      setDestinationSlug(slug);
+    } else if (route.startsWith('blog_')) {
+      const slug = route.replace('blog_', '');
+      window.location.hash = `#/blog/${slug}`;
+      setCurrentRoute(route);
+      setBlogSlug(slug);
     } else if (route === 'home') {
       window.location.hash = '#/';
+      setCurrentRoute('home');
     } else {
       window.location.hash = `#/${route}`;
+      setCurrentRoute(route);
     }
   };
 
@@ -63,6 +112,15 @@ export default function App() {
       return (
         <DestinationDetail 
           countrySlug={destinationSlug} 
+          onNavigate={handleNavigation} 
+        />
+      );
+    }
+
+    if (currentRoute.startsWith('blog_')) {
+      return (
+        <BlogDetail 
+          blogSlug={blogSlug} 
           onNavigate={handleNavigation} 
         />
       );

@@ -1,6 +1,7 @@
 import React from 'react';
 // @ts-ignore
 import regeneratedImage from '../assets/images/regenerated_image_1781048778098.jpg';
+import OptimizedImage from '../components/OptimizedImage';
 import { 
   Award, 
   MapPin, 
@@ -72,11 +73,11 @@ export default function AboutAndServices() {
           <div className="absolute inset-0 bg-[#3157E6]/5 rounded-full blur-[80px]" />
           
           <div className="relative rounded-[30px] border border-slate-200 overflow-hidden shadow-xl bg-slate-100 aspect-video lg:aspect-square">
-            <img 
-              src={regeneratedImage} 
+            <OptimizedImage 
+              url={regeneratedImage} 
               alt="Experienced processing advisors hosting a physical university seminar training" 
               className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
+              loading="lazy"
             />
           </div>
         </div>
